@@ -6,6 +6,7 @@
 
 String storyLine[];
 String playerName = "", friendName = "", enemyName = "";
+String test = "test";
 
 void setup()
 {
@@ -44,6 +45,11 @@ void keyPressed()
 }
 
 void mouseClicked()
+{
+  
+}
+
+void Button()
 {
   
 }
