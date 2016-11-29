@@ -1,39 +1,101 @@
-#What will he do?
-A young man sits curled in a fetal position under the covers of his bed, snoring loudly. Unfortunately for him, his alarm clock has begun to ring loudly (though he has not yet become aware of it). However, in his deep sleep, his mind is unable to come up with his name. Shocking. As it so turns out, this young man is you! What will this young man’s name be?
+#
+Begin
+A young man sits curled in a fetal position under the covers of his bed, snoring loudly. Unfortunately for him, his alarm clock has begun to ring loudly (though he has not yet become aware of it). However, in his deep sleep, his mind is unable to come up with his name. Shocking. As it so turns out, this young man is you! What will this young man’s name be? The young man’s name is @PlayerName, yes?
+>Placeholder, Placeholder, Placeholder
 
-The young man’s name is @PlayerName, yes?
-# Yes
+#
+A Hero is Born
 Suddenly cognizant of your name, you groan. The jogging of your memory was all your mind needed to notify you of the incessant ringing of the nearby alarm clock, informing you of the need to wake up. Today is, as luck would have it, the first day of the 9th grade. Yet @PlayerName, while aware of its presence, has not yet been fully roused by his alarm clock. 
-# Wake Up
+>Placeholder, Placeholder, Placeholder Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+# 
+A Hero Has Overslept
 Hopping to your feet, you shake his head to relieve yourself of fatigue, before glancing over at the alarm clock. 7:15. Crap. The bus leaves at 7:30, and you’ve yet to even get ready yet. Sighing, you open your closet to get dressed. 
-#Dress Comfortably
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Dresses for Comfort
 You throw on your favorite shirt, featuring the mascot of a popular video game, along with a baggy pair of track pants and a worn pair of Crocs. You wear clothes so you don’t get looked at funny for, well, not doing so, not because you’re trying to please anyone. Fashion is for the people-pleasers. 
-#Dress Fashionably 
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+
+#
+A Hero Dresses to Impress
 @PlayerName meticulously picks out the most fashionable options. Picking out an outfit to wear is basically an art form, but you have it down to a goddamn science. H&M t-shirt, acceptably fashionable without trying too hard; faded red hoodie over it, to seem hip but like you don’t care; denim jeans, a tried and true outfit choice; a squirt of gel in the hair, just to look slick; a pair of Vans, the footwear of the popular kids. Looking stylish has never been this easy. 
-#…Don’t?
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Dislikes Societal Constructs
 Bucking the common trends of society, @PlayerName decides to make a statement. As either laziness or rebellion, @PlayerName decides to go without clothes entirely, letting it all hang out. Only God can judge him now. Or literally anybody around him. But you’ve got no shame—@PlayerName doesn’t care with others think of him. What kind of start to the 9th grade would dressing oneself like a normal human being be? Certainly not one for the likes of @PlayerName. 
-#Examine Room
-You’re in no real sort of hurry. The bus leaves when it leaves...if you’re on it, so be it. As such, @PlayerName stops to enjoy the view for a little bit. In the past, you were a bit of a video game lover...well, you still are, but you used to be one, too. The walls of the room are covered in posters for this and that
-#Go Downstairs
-Tumbling down the staircase, @PlayerName manages to maintain his long enough to reach his living room in one piece. Unfortunately, his speed at descending the staircase puts him no closer to reaching his bus on time—only five minutes are left on the clock. Every second that passes is one less second left. The bus stop is only a few blocks away from the house, but you’ve to even eat breakfast.
-#Run to the Bus Stop
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Gets Acquainted 
+You’re in no real sort of hurry. The bus leaves when it leaves...if you’re on it, so be it. As such, @PlayerName stops to enjoy the view for a little bit. In the past, you were a bit of a video game lover...well, you still are, but you used to be one, too. The walls of the room are covered in posters for this and that.
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Descends
+Tumbling down the staircase, @PlayerName manages to maintain his long enough to reach his living room in one piece. Unfortunately, his speed at descending the staircase puts him no closer to reaching his bus on time—only five minutes are left on the clock. Every second that passes is one less second left. The bus stop is only a few blocks away from the house, but you’ve yet to even eat breakfast.
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Makes Haste
 Skipping the most important meal of the day, you sprint out the door, bag in tow. Luckily for you, the bus doesn’t seem to have left yet, and is sitting in wait at the end of the road. Your best friend, just so happens to live in the house adjacent to his own. And though @PlayerName has managed to recall the name that has been his own for the entirety of his life thus far, he can’t quite seem to put a finger on the name of his closest amigo. 
 
+
 The name of @PlayerName’s best friend is @FriendName, yes?
-#Jog Memory
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero...Remembers
 Memory sufficiently jogged, you recall that the name of your closest companion is indeed @FriendName, the bestie that has stood by you in times of trouble for years, through the good and the bad. @FriendName has always been there for you. Heck, the more your memory is jogged, the more you begin to realize that it is not just you, your family (strangely absent this morning), and @FriendName (and @FriendName’s Family) who live in this neighborhood. No, in addition to all of the aforementioned folks around here, another, more sinister figure’s name tugs at the corner of your mind. Somebody you dislike, somebody…female? Somebody antagonistic, maybe? An enemy, the name of whom you’ve also strangely forgotten?
 
 The name of this antagonistic figure is @EnemyName, yes?
-#Finish Jogging Memory
-Deciding that you’ve done enough recollection of names, you realize that you’re no closer to your bus than you were on stopping in front of @FriendName’s house. Luckily for you, @FriendName is similarly sloth-like in his speed at reaching the bus each morning. This can be both a blessing and a curse at times, as, while the two of you tend to balance out in terms of punctuality, there’re always those days when you can’t help be leave one another behind. Growing slightly antsy, you look down at your watch to confirm your suspicions. Yup, as anticipated, @FriendName was a tad later than usual, with the mini-watch adorning your arm reading 7:21. If you want to have any chance of making it to the bus, you’d better hurry.
-#Leave @FriendName Behind
-Deciding that your reaching school on time should be your principle concern in life this morning, you stare wistfully at the door to @FriendName’s house before breaking out into a sprint. If he misses the bus, that’s on him—you won’t have that lovable son of a gun holding you back today. This unfortunately means that you will have to brave the walk in front of the house of @EnemyName alone, something you certainly would rather do without on your first day. 
-#Knock on Door to @FriendName’s House
-Pulling back your fist, you rap on the door to @FriendName’s house in a sort of panicked rhythm. As if on cue, @FriendName instantly twists the doorknob, the door flying inwards. “Hey,” he yells out, bag hanging off his shoulder, “ready for the first day?” You nod in confirmation, smiling back at him. He locks to door behind him, stepping out onto his patio. “Alright, then, let’s go!” Together, the two of you run off towards the bus. A few minutes behind schedule, sure, but towards the bus nonetheless. As luck would have it—indeed, as it has for the past 14 years of your life—@EnemyName lives only a few houses down from @FriendName, and seems to be just stepping down from her porch as well. 
-#Call Out to @EnemyName
-In a rare good mood on your first day of high school, you shout a greeting in the direction of @EnemyName, eliciting a scowl in response. @FriendName looks over at you quizzically, concerned about this never before seen display of friendship towards what, by all previous accounts would be considered your mortal enemy. Shrugging it off, you continue to run towards your bus, leaving @EnemyName in the dust. Instead of dwelling on the potential repercussions of greeting her, you continue to pump your little legs in the direction of the school bus. Only five minutes left on the clock, after all (thanks, watch)!
-#Decide Not to Anger The Beast
-Keeping your head down, you quicken your already-fast pace in an effort to spend as little time as possible near @EnemyName. If there was a list of ways to immediately ruin a good mood, direct eye contact with @EnemyName would probably take the grand prize. Unfortunately, despite your best efforts to ensure minimum interaction near the enemy (MINE, for short), @EnemyName still glanced up (though your back was turned to her, admittedly), rolling her eyes. The feeling of distaste is mutual. But that’s a whole ‘nother beast unto itself.
-#Reach Bus
-@FriendName in tow, you step onto your school bus, wanting
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
 
+#
+A Hero Collects Himself
+Deciding that you’ve done enough recollection of names, you realize that you’re no closer to your bus than you were on stopping in front of @FriendName’s house. Luckily for you, @FriendName is similarly sloth-like in his speed at reaching the bus each morning. This can be both a blessing and a curse at times, as, while the two of you tend to balance out in terms of punctuality, there’re always those days when you can’t help be leave one another behind. Growing slightly antsy, you look down at your watch to confirm your suspicions. Yup, as anticipated, @FriendName was a tad later than usual, with the mini-watch adorning your arm reading 7:21. If you want to have any chance of making it to the bus, you’d better hurry.
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+
+#
+A Hero Needs None Other
+Deciding that your reaching school on time should be your principle concern in life this morning, you stare wistfully at the door to @FriendName’s house before breaking out into a sprint. If he misses the bus, that’s on him—you won’t have that lovable son of a gun holding you back today. This unfortunately means that you will have to brave the walk in front of the house of @EnemyName alone, something you certainly would rather do without on your first day.
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+ 
+#
+A Hero Needs Companions
+Pulling back your fist, you rap on the door to @FriendName’s house in a sort of panicked rhythm. As if on cue, @FriendName instantly twists the doorknob, the door flying inwards. “Hey,” he yells out, bag hanging off his shoulder, “ready for the first day?” You nod in confirmation, smiling back at him. He locks to door behind him, stepping out onto his patio. “Alright, then, let’s go!” Together, the two of you run off towards the bus. A few minutes behind schedule, sure, but towards the bus nonetheless. As luck would have it—indeed, as it has for the past 14 years of your life—@EnemyName lives only a few houses down from @FriendName, and seems to be just stepping down from her porch as well. 
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Makes Peace
+In a rare good mood on your first day of high school, you shout a greeting in the direction of @EnemyName, eliciting a scowl in response. @FriendName looks over at you quizzically, concerned about this never before seen display of friendship towards what, by all previous accounts would be considered your mortal enemy. Shrugging it off, you continue to run towards your bus, leaving @EnemyName in the dust. Instead of dwelling on the potential repercussions of greeting her, you continue to pump your little legs in the direction of the school bus. Only five minutes left on the clock, after all (thanks, watch)!
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Decides Not to Anger The Beast
+Keeping your head down, you quicken your already-fast pace in an effort to spend as little time as possible near @EnemyName. If there was a list of ways to immediately ruin a good mood, direct eye contact with @EnemyName would probably take the grand prize. Unfortunately, despite your best efforts to ensure minimum interaction near the enemy (MINE, for short), @EnemyName still glanced up (though your back was turned to her, admittedly), rolling her eyes. The feeling of distaste is mutual. But that’s a whole ‘nother beast unto itself.
+>Placeholder, Placeholder, Placeholder
+1, 2, 3
+
+#
+A Hero Arrives 
+@FriendName in tow, you step onto your school bus, wanting
+>Placeholder, Placeholder, Placeholder
+1, 2, 3

@@ -4,29 +4,28 @@
  
  */
 
-String storyLine[];
+String storyline[];
 String playerName = "", friendName = "", enemyName = "";
-String test = "test";
-Screen screens[] = new Screen[100];
+ArrayList<Screen> screens;
+int currentScreen = 0;
+int q = width/2;
+int e = height/2;
+
 
 void setup()
 {
   fullScreen(P3D);
-  storyLine = loadStrings("textadventure.txt");
-  screens[0] = new Screen("Start", "Help", "Quit", width/2, height/2, height/30, 0);
+  storyline = loadStrings("textadventure.txt");
+  screens = new ArrayList<Screen>();
+  Parse();
 }
 
 void draw()
 {
-  background(255);
-  fill(0);
-  textSize(20);
-  text(storyLine[4], width/50, height/30, width - width/50, height/3*4);
-  //storyLine.replaceAll(,);
-  println(playerName);
-  text("What will the name of this young man be? " + playerName, width/3, height/2);
-  storyLine[4] = storyLine[4].replaceAll("@PlayerName", playerName);
-  println(storyLine[4]);
+  if (screens.size() > 0)
+  {
+    screens.get(currentScreen).ScreenDraw();
+  }
 }
 
 void keyPressed()
@@ -44,6 +43,26 @@ void keyPressed()
     }
 }
 
-void mouseClicked()
+void Parse()
 {
+  for (int i = 0; i < storyline.length; i++)
+  {
+    if (storyline[i].equals("#"))
+    {
+      i++; 
+      String title = storyline[i++];
+      String text = "";
+      while (storyline[i].charAt(0) != '>')
+      {
+        text += storyline[i];
+        i++;
+      }
+      String currentLine = storyline[i].substring(1, storyline[i].length()); 
+      String[] buttonText = new String[3];
+      buttonText = split(currentLine, ",");
+      i++;
+      
+      screens.add(new Screen(title, text, buttonText));
+    }
+  }
 }
