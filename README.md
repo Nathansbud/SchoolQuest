@@ -26,11 +26,10 @@ These will be used to slightly shape the path that things take, along with havin
   <h3>Milestone #2: November 30th, 2016 </h3>
   <strong>Goal:</strong> You should have a small prototype by the end of this milestone.
   <ul>
-    <li>Complete Storyboarding and Plot</li>
+    <li>Begin Storyboarding and Plot</li>
     <li>Begin Creation of Project</li>
     <li>Make Progress in Writing Storyline</li>
-    <li>Create At Least 2~3 Minigames</li>
-    <li>Implement Inventory System</li>
+    <li>Finish Base Systems</li>
   </ul>
 </p>
  
@@ -42,6 +41,8 @@ These will be used to slightly shape the path that things take, along with havin
     <li>Finish Writing and Pathways</li>
     <li>Edit Writing for Clarity and Plot</li>
     <li>Implement Player Interaction Via Naming</li>
+    <li>Create At Least 2~3 Minigames</li>
+    <li>Implement Inventory System</li>
   </ul>
 </div>
  
