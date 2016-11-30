@@ -76,36 +76,36 @@ void keyPressed() //Replaces all @CharacterNames with player-inputted ones. Howe
   }
 }
 
-void Parse()
+void Parse() //The real bread and butter of the program
 {
-  for (int i = 0; i < storyline.length; i++)
+  for (int i = 0; i < storyline.length; i++) //So long as all lines have not been read through, keep iterating
   {
-    if (storyline[i].equals("#") || storyline[i].equals("# "))
-    {
-      i++; 
-      String title = storyline[i++];
-      String text = "";
-      while (storyline[i].charAt(0) != '>')
+    if (storyline[i].equals("#") || storyline[i].equals("# ")) //Looks for the line with only a # (or # with a space, in case of accidental space, to prevent issue)
+    { //If it finds this line, it knows that a "screen chunk" is present
+      i++; //Move to next line
+      String title = storyline[i++]; //This moved-to line is the title of the screen. Record this line and increase i by 1
+      String text = ""; //This moved-to line, always after the title, begins the body text of the page. This line can go until...
+      while (storyline[i].charAt(0) != '>') //...the carat. Until the first character seen on a line is >, text is increased by each line of the storyline
       {
         text += storyline[i];
-        i++;
-        while (storyline[i].length() == 0)
+        i++; //Continually iterated until it reaches the carat
+        while (storyline[i].length() == 0) //If it reaches a blank line, instead of crashing (as it would otherwise), replaces that blank line with 2 line breaks (as would be the reason for leaving a blank line in the first place)
         {
           storyline[i] = "\n\n";
         }
       }
-      String currentLine = storyline[i].substring(1, storyline[i].length()); 
+      String currentLine = storyline[i].substring(1, storyline[i].length()); //The current line after reaching the carat should start after the carat, and stretch to the end of the line
       String[] buttonText = new String[3];
-      buttonText = split(currentLine, ", ");
-      i++;
+      buttonText = split(currentLine, ", "); //Everything on currentLine should be put into an array, seperated by commas (there can only be three things)
+      i++; //Increasing i by 1 puts the current line at the line after the carat, which tells the screens each button should lead to. 
       int[] goesTo = new int[3];
-      goesTo = int(split(storyline[i], ", "));
-      screens.add(new Screen(title, text, buttonText, goesTo));
+      goesTo = int(split(storyline[i], ", ")); //Same deal as buttons.
+      screens.add(new Screen(title, text, buttonText, goesTo)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
     }
   }
 }
 
 void mouseReleased()
 {
-  mouseIsReleased = true;
+  mouseIsReleased = true; //True for a frame only, which is enough to check for button presses
 }
