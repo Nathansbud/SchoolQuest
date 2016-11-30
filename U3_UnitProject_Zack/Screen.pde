@@ -1,4 +1,4 @@
-class Screen
+class Screen //<>//
 {
   private Button _options[] = new Button[3];
   private String[] _buttonText = new String[3];
@@ -27,43 +27,41 @@ class Screen
     {
       _options[i].Update();
     }
-    if (playerName != "")
+
+    if (currentScreen >= 1 && playerName != "")
     {
       _text = _text.replaceAll("@PlayerName", playerName);
+    } else if (currentScreen > 1 && playerName == "")
+    {
+      _text = _text.replaceAll("@PlayerName", "Zack");
+    }
+    if (currentScreen >= 13 && friendName != "")
+    {
       _text = _text.replaceAll("@FriendName", friendName);
+    } else if(currentScreen > 13 && playerName == "")
+    {
+      _text = _text.replaceAll("@FriendName", "Abhay");
+    }
+   
+    if (currentScreen >= 14 && enemyName != "")
+    {
       _text = _text.replaceAll("@EnemyName", enemyName);
+    } else if(currentScreen > 14 && enemyName == "")
+    {
+      _text = _text.replaceAll("@EnemyName", "Rana");
     }
     textSize(_textSize);
     fill(0);
-    text(_title, q - (_title.length() * _textSize)/2, height/40); 
+    text(_title, width/2 - (_title.length() * _textSize)/2, height/40); 
     text(_text, width/48, height/25, _tbW, _tbH);
-    println(_goesTo[0]);
+    println("Button 1 Leads to Screen: " + _goesTo[0] + ", Button 2 Leads to Screen: " + _goesTo[1] + ", Button 3 Leads to Screen: "
+      + _goesTo[2] + ", and the current screen number is: " + currentScreen);
   }
 
   private void DrawButtons()
   {
-    _options[0] = new Button(_buttonText[0], width/2 - _buttonText[0].length(), height - height/3, _goesTo[0]); //_goesTo[0]);
+    _options[0] = new Button(_buttonText[0], width/2 - _buttonText[0].length(), height - height/3, _goesTo[0]);
     _options[1] = new Button(_buttonText[1], width/2 - _buttonText[1].length(), height - height/3 + height/18, _goesTo[1]);
     _options[2] = new Button(_buttonText[2], width/2 - _buttonText[2].length(), height - height/3 + height/9, _goesTo[2]);
-  }
-
-  public void ButtonlessDraw()
-  {
-    background(255); 
-    DrawButtons();
-    if (playerName != "")
-    {
-      if (keyPressed && key == TAB)
-      {
-        _text = _text.replaceAll("@PlayerName", playerName);
-        _text = _text.replaceAll("@FriendName", friendName);
-        _text = _text.replaceAll("@EnemyName", enemyName);
-      }
-    }
-    textSize(_textSize);
-    fill(0);
-    text(_title, q - (_title.length() * _textSize)/2, height/40); 
-    text(_text, width/48, height/25, _tbW, _tbH);
-    println(_goesTo[0]);
   }
 }

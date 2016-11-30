@@ -4,34 +4,35 @@
  
  */
 
-String storyline[];
-String playerName = "", friendName = "", enemyName = "";
-ArrayList<Screen> screens;
-int currentScreen = 0;
-int q, e;
-boolean screenLoaded;
+String storyline[]; //Array of Text. This makes all the everything work.
+String playerName = "", friendName = "", enemyName = ""; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
+ArrayList<Screen> screens; 
+int currentScreen = 1; //Current screen in the screens ArrayList being shown
+//boolean playerNameSelected;
+//boolean friendNameSelected;
+//boolean enemyNameSelected;
+boolean mouseIsReleased; //Used to trigger button presses
 
 void setup()
 {
-  fullScreen(P2D);
+  fullScreen();
   screens = new ArrayList<Screen>();
   storyline = loadStrings("textadventure.txt");
-  Parse();
-  q = width/2;
-  e = height/2;
+  Parse(); 
 }
 
 void draw()
 {
-  if (screens.size() > 0)// && currentScreen != 0)
+  if (screens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
   {
-    screens.get(currentScreen).Draw();
+    screens.get(currentScreen).Draw(); 
   }
+  mouseIsReleased = false; //mouseIsReleased is continually set to false so that the releasing of mouse is only registered for one frame, else would trigger buttons at any time
 }
 
-void keyPressed()
+void keyPressed() //Replaces all @CharacterNames with player-inputted ones. However, not fully finished yet (drawing-wise, doesn't prevent player from not naming characters)
 {
-  if (currentScreen == 0)
+  if (currentScreen == 1) 
   {
     if (key == BACKSPACE)
     {
@@ -45,13 +46,41 @@ void keyPressed()
         playerName = playerName + key;
       }
   }
+  if (currentScreen == 11 || currentScreen == 13)
+  {
+    if (key == BACKSPACE)
+    {
+      if (friendName.length() > 0)
+      {
+        friendName = friendName.substring(0, friendName.length() - 1);
+      }
+    } else
+      if (key != CODED && key != ENTER && friendName.length() <= 10)
+      {
+        friendName = friendName + key;
+      }
+  }
+  if (currentScreen == 14)
+  {
+    if (key == BACKSPACE)
+    {
+      if (enemyName.length() > 0)
+      {
+        enemyName = enemyName.substring(0, enemyName.length() - 1);
+      }
+    } else
+      if (key != CODED && key != ENTER && enemyName.length() <= 10)
+      {
+        enemyName = enemyName + key;
+      }
+  }
 }
 
 void Parse()
 {
   for (int i = 0; i < storyline.length; i++)
   {
-    if (storyline[i].equals("#"))
+    if (storyline[i].equals("#") || storyline[i].equals("# "))
     {
       i++; 
       String title = storyline[i++];
@@ -76,6 +105,7 @@ void Parse()
   }
 }
 
-void mouseClicked()
+void mouseReleased()
 {
+  mouseIsReleased = true;
 }
