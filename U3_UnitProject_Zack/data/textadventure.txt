@@ -1,12 +1,16 @@
 #
 Begin
-A young man sits curled in a fetal position under the covers of his bed, snoring loudly. Unfortunately for him, his alarm clock has begun to ring loudly (though he has not yet become aware of it). However, in his deep sleep, his mind is unable to come up with his name. Shocking. As it so turns out, this young man is you! What will this young man’s name be? The young man’s name is @PlayerName, yes?
+A young man sits curled in a fetal position under the covers of his bed, snoring loudly. Unfortunately for him, his alarm clock has begun to ring loudly (though he has not yet become aware of it). However, in his deep sleep, his mind is unable to come up with his name. Shocking. As it so turns out, this young man is you! What will this young man’s name be? 
+
+The young man’s name is what, again? @PlayerName
+
 >Placeholder, Placeholder, Placeholder
+1, 2, 3
 
 #
 A Hero is Born
 Suddenly cognizant of your name, you groan. The jogging of your memory was all your mind needed to notify you of the incessant ringing of the nearby alarm clock, informing you of the need to wake up. Today is, as luck would have it, the first day of the 9th grade. Yet @PlayerName, while aware of its presence, has not yet been fully roused by his alarm clock. 
->Placeholder, Placeholder, Placeholder Placeholder, Placeholder, Placeholder
+>Placeholder, Placeholder, Placeholder
 1, 2, 3
 
 # 
@@ -48,18 +52,13 @@ Tumbling down the staircase, @PlayerName manages to maintain his long enough to 
 
 #
 A Hero Makes Haste
-Skipping the most important meal of the day, you sprint out the door, bag in tow. Luckily for you, the bus doesn’t seem to have left yet, and is sitting in wait at the end of the road. Your best friend, just so happens to live in the house adjacent to his own. And though @PlayerName has managed to recall the name that has been his own for the entirety of his life thus far, he can’t quite seem to put a finger on the name of his closest amigo. 
-
-
-The name of @PlayerName’s best friend is @FriendName, yes?
+Skipping the most important meal of the day, you sprint out the door, bag in tow. Luckily for you, the bus doesn’t seem to have left yet, and is sitting in wait at the end of the road. Your best friend, just so happens to live in the house adjacent to his own. And though @PlayerName has managed to recall the name that has been his own for the entirety of his life thus far, he can’t quite seem to put a finger on the name of his closest amigo. The name of @PlayerName’s best friend is @FriendName, yes?
 >Placeholder, Placeholder, Placeholder
 1, 2, 3
 
 #
 A Hero...Remembers
-Memory sufficiently jogged, you recall that the name of your closest companion is indeed @FriendName, the bestie that has stood by you in times of trouble for years, through the good and the bad. @FriendName has always been there for you. Heck, the more your memory is jogged, the more you begin to realize that it is not just you, your family (strangely absent this morning), and @FriendName (and @FriendName’s Family) who live in this neighborhood. No, in addition to all of the aforementioned folks around here, another, more sinister figure’s name tugs at the corner of your mind. Somebody you dislike, somebody…female? Somebody antagonistic, maybe? An enemy, the name of whom you’ve also strangely forgotten?
-
-The name of this antagonistic figure is @EnemyName, yes?
+Memory sufficiently jogged, you recall that the name of your closest companion is indeed @FriendName, the bestie that has stood by you in times of trouble for years, through the good and the bad. @FriendName has always been there for you. Heck, the more your memory is jogged, the more you begin to realize that it is not just you, your family (strangely absent this morning), and @FriendName (and @FriendName’s Family) who live in this neighborhood. No, in addition to all of the aforementioned folks around here, another, more sinister figure’s name tugs at the corner of your mind. Somebody you dislike, somebody…female? Somebody antagonistic, maybe? An enemy, the name of whom you’ve also strangely forgotten? The name of this antagonistic figure is @EnemyName, yes?
 >Placeholder, Placeholder, Placeholder
 1, 2, 3
 
