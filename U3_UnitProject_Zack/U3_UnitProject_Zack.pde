@@ -17,7 +17,7 @@ void setup()
 {
   fullScreen();
   screens = new ArrayList<Screen>();
-  storyline = loadStrings("textadventure.txt");
+  storyline = loadStrings("textadventure.zk");
   Parse(); 
 }
 
@@ -73,6 +73,10 @@ void keyPressed() //Replaces all @CharacterNames with player-inputted ones. Howe
       {
         enemyName = enemyName + key;
       }
+  }
+  if(key == TAB)
+  {
+   currentScreen = 1; 
   }
 }
 

@@ -35,7 +35,7 @@ class Screen //<>//
     {
       _text = _text.replaceAll("@PlayerName", "Zack");
     }
-    if (currentScreen >= 13 && friendName != "") //If no friend name is set, friendName = Abhay
+    if (currentScreen >= 11 && friendName != "") //If no friend name is set, friendName = Abhay
     {
       _text = _text.replaceAll("@FriendName", friendName);
     } else if (currentScreen > 13 && playerName == "")
@@ -54,7 +54,7 @@ class Screen //<>//
     textSize(_textSize); 
     fill(0);
     textAlign(CENTER);
-    text(_title, width/2 - (_title.length() * _textSize)/2, height/40);  //Puts title at top center of screen
+    text(_title, width/2, height/40);  //Puts title at top center of screen
     textAlign(LEFT);
     text(_text, width/48, height/25, _tbW, _tbH); //Puts body text under title, goes until limits specified by textbox
     println("Button 1 Leads to Screen: " + _goesTo[0] + ", Button 2 Leads to Screen: " + _goesTo[1] + ", Button 3 Leads to Screen: "

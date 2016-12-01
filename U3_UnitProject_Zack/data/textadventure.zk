@@ -40,23 +40,27 @@ But, like, if you think hard enough, maybe you’ll realize that you want to exi
 4
 #
 A Hero is Born
-Suddenly cognizant of your name, you groan. The jogging of your memory was all your mind needed to notify you of the incessant ringing of the nearby alarm clock, informing you of the need to wake up. Today is, as luck would have it, the first day of the 9th grade. Yet @PlayerName, while aware of its presence, has not yet been fully roused by his alarm clock. 
+Suddenly cognizant of your name, you groan. The jogging of your memory was all your mind needed to notify you of the incessant ringing of the nearby alarm clock, informing you of the need to wake up. Today is, as luck would have it, the first day of the 9th grade. Yet @PlayerName, while aware of its presence, has not yet been fully roused by his alarm clock. Meaning, of course, you remain asleep under the covers, though with enough willpower you could likely wake yourself from your slumber.
+
+What will you do?
 >Wake Yourself With Sheer Willpower, Ignore Alarm, Continue Sleeping
 5, 0, 0
 
 5
 #
 A Hero Has Overslept
-Hopping to your feet, you shake his head to relieve yourself of fatigue, before glancing over at the alarm clock. 7:15. Crap. The bus leaves at 7:30, and you’ve yet to even get ready yet. Sighing, you open your closet to get dressed. 
+Shaking off the protective cover that is the night realm, you awake from your deep sleep, your usual school-day routine. Hopping to your feet, you shake his head to relieve yourself of fatigue, before glancing over at the alarm clock. 7:15. Crap. Unfortunately, you’re still a little rusty from the summer, and you slightly missed the mark, and slept through an extra cycle of the snooze button; 21 times was, it seems, a time too many. The bus leaves at 7:30, and you’ve yet to even get ready yet. 
 
-How will you clothe yourself?
->For School, For The Fans, No?
+Sighing, you open your closet to get dressed. How will you clothe yourself?
+>For School, For The Fans, ...no.
 6, 7, 8
 
 6
 #
 A Hero Dresses for Comfort
-You throw on your favorite shirt, featuring the mascot of a popular video game, along with a baggy pair of track pants and a worn pair of Crocs. You wear clothes so you don’t get looked at funny for, well, not doing so, not because you’re trying to please anyone. Fashion is for the people-pleasers! Satisfied with your choices, your ability to clothe yourself in the way that you—not others—see fit, you shut the door to your closet. Damn. You look good. Baggy clothes withstanding.
+Lazily, you push open the door to your closet. Ignoring the neatly arranged piles of formal wear, you grab your favorite t-shirt from the mess that is the left of your cabinet, along with a baggy pair of track pants and a worn pair of Crocs. Frankly, you wear clothing for you, not because you’re trying to please anyone. Fashion is for the people-pleasers! Satisfied with your choices, your ability to clothe yourself in the way that you see fit, you shut the door to your closet. Damn. You look good. Baggy clothes withstanding.
+
+But though you look fine as ever, your stellar choices in clothing aren’t doing much to get you to the best. Hop to it!
 
 >Go Downstairs, Look Around Room, Placeholder
 10, 9, 0
@@ -64,14 +68,19 @@ You throw on your favorite shirt, featuring the mascot of a popular video game, 
 7
 #
 A Hero Dresses to Impress
-@PlayerName meticulously picks out the most fashionable options. Picking out an outfit to wear is basically an art form, but you have it down to a goddamn science. H&M t-shirt, acceptably fashionable without trying too hard; faded red hoodie over it, to seem hip but like you don’t care; denim jeans, a tried and true outfit choice; a squirt of gel in the hair, just to look slick; a pair of Vans, the footwear of the popular kids. Looking stylish has never been this easy. 
->Placeholder, Placeholder, Placeholder
-10, 2, 0
+Ready to rumble, you throw upon the doors to your closet, before realizing that you didn’t need to look in the closet in the first place: fashion isn’t something that can be done on the fly. No, your outfit was picked out the night before, and sits on your desk. @PlayerName always makes sure to meticulously pick out the most fashionable options. Picking out an outfit to wear is basically an art form, but you have it down to a goddamn science. H&M t-shirt, acceptably fashionable without trying too hard; faded red hoodie over it, to seem hip but like you don’t care; denim jeans, a tried and true outfit choice; a squirt of gel in the hair, just to look slick; a pair of Vans, the footwear of the popular kids. Looking stylish has never been this easy. 
+
+But you’re going to be late, no matter how stellar you look, and you still haven’t even eaten breakfast. Hop to it!
+
+>Go Downstairs, Look Around Room, Placeholder
+10, 9, 0
 
 8
 #
 A Hero Dislikes Societal Constructs
-Bucking the common trends of society, @PlayerName decides to make a statement. As either laziness or rebellion, @PlayerName decides to go without clothes entirely, letting it all hang out. Only God can judge him now. Or literally anybody around him. But you’ve got no shame—@PlayerName doesn’t care with others think of him. What kind of start to the 9th grade would dressing oneself like a normal human being be? Certainly not one for the likes of @PlayerName. You’re here to make a statement! But obviously, showing up late would vastly diminish the effect of said statement, so, you’d best be hot stepping it towards the bus!
+Bucking the common trends of society, @PlayerName decides to make a statement. As either laziness or rebellion, @PlayerName decides to go without clothes entirely, letting it all hang out. Only God can judge him now. Or literally anybody around him. But you’ve got no shame—@PlayerName doesn’t care with others think of him. What kind of start to the 9th grade would dressing oneself like a normal human being be? Certainly not one for the likes of @PlayerName. You’re here to make a statement! And if that makes you a social outcast, so be it.
+
+But obviously, showing up late would vastly diminish the effect of said statement, so, you’d best be hot stepping it towards the bus!
 >Go Downstairs, Look Around Room, Place of Holding
 10, 9, 0
 
@@ -168,6 +177,44 @@ Keeping your head down, you quicken your already-fast pace in an effort to spend
 20
 #
 A Hero Arrives 
-@FriendName in tow, you step onto your school bus, wanting
->Placeholder, Placeholder, Placeholder
-0, 0, 0
+@FriendName in tow, you step onto your school bus, wanting—understandably—not to miss your first day of school. So many familiar faces that you had no desire to see again, but hey, that’s life, eh? Weaving between outstretched legs, you and @FriendName make your way to the back of the bus (your seat is always the 2nd from the left in the back row of 5, with @FriendName sitting right beside you). New year, same seating arrangement, with @EnemyName in the row ahead of you, friend on her right side (a nasty girl by the name of Janet), along with Chuck and Taylor in the opposite (for all their positive qualities, they always seemed to talk exclusively about shoes). 
+
+As more and more kids file in, you glance over to the right of you. Huh. No sign of any of your other amigos. Glancing down at your watch, you make note of the time: 7:29. After a half dozen complaints of kids missing school by deliberately holding the bus, the schools nearby put in place a zero-tolerance policy on missing the bus. If you weren’t there at 7:30:00, the bus was gone, no ifs, ands, or buts. 
+
+And just on time, the sound of the bus wheels turning shuts up your internal monologue. Guess friend two and three didn’t make it. Sighing, you glance down at your hands. How will you spend your bus ride?
+
+>Introspecting, Making Conversation With The Bus Folk, Gaming. Always.
+21, 22, 23
+
+21
+#
+A Hero Contemplates Himself
+Looking down at the palms of your hands, you decide to spend the duration of your bus ride thinking about life. Your summer vacation was great—though, strangely, you can’t seem to recall too much about it...it almost feels like it never even happened—but you really didn’t get the time to just THINK. @FriendName is great, sure, but sometimes, you just need a little you time on the bus, y’know? Oddly, you feel almost...hollow? The harder you try and think, really THINK about yourself, the less you can seem to uncover from your mind. It’s like an impenetrable fort. 
+
+Does that maybe say something about you? What could it mean? It’s kind of scary to look inwards and see absolutely nothing! But regardless of the deeper meanings it could hold, your introspection is promptly cut off by your arrival at school. Day 1 of 180. Sigh. The bus slows to a halt, the door sliding open, and like a pack of animals, your classmates push each other out of the way in their rush to get out. 
+
+Yawning, you straighten your back, and pull @FriendName up along with you. What will you do?
+
+> Begin The School Day, Placeholder, The Bastards Can’t Make Me! 
+24, 2, 3
+
+22
+#
+A Hero Converses
+X
+> X, X, X
+1, 2, 3
+
+23
+#
+A Hero Enjoys Himself
+X
+> X, X, X
+1, 2, 3
+
+24
+#
+A Hero Disembarks
+X
+> X, X, X
+1, 2, 3
