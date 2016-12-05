@@ -1,31 +1,41 @@
-/* Text Adventure 2: The Sequel (Working Title) //<>//
+/* SchoolQuest (Working Title) //<>//
  
- A text adventure by  Zack.
+ A text adventure by Zack.
  
  */
 
 String storyline[]; //Array of Text. This makes all the everything work.
-String playerName = "", friendName = "", enemyName = ""; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
+String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet"; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
 ArrayList<Screen> screens; 
 int currentScreen = 1; //Current screen in the screens ArrayList being shown
 //boolean playerNameSelected;
 //boolean friendNameSelected;
 //boolean enemyNameSelected;
-boolean mouseIsReleased; //Used to trigger button presses
+boolean mouseIsReleased, drawScreen = true; //Used to trigger button presses
 
 void setup()
 {
   fullScreen();
   screens = new ArrayList<Screen>();
   storyline = loadStrings("textadventure.zk");
-  Parse(); 
+  Parse();
 }
 
 void draw()
 {
+  if(currentScreen == 0)
+  {
+   drawScreen = false;
+  }
   if (screens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
   {
-    screens.get(currentScreen).Draw(); 
+    if(drawScreen)
+    {
+    screens.get(currentScreen).Update();
+    } else
+    {
+     exit(); 
+    }
   }
   mouseIsReleased = false; //mouseIsReleased is continually set to false so that the releasing of mouse is only registered for one frame, else would trigger buttons at any time
 }
@@ -74,9 +84,9 @@ void keyPressed() //Replaces all @CharacterNames with player-inputted ones. Howe
         enemyName = enemyName + key;
       }
   }
-  if(key == TAB)
+  if (key == TAB)
   {
-   currentScreen = 1; 
+    currentScreen = 1;
   }
 }
 
@@ -99,10 +109,10 @@ void Parse() //The real bread and butter of the program
         }
       }
       String currentLine = storyline[i].substring(1, storyline[i].length()); //The current line after reaching the carat should start after the carat, and stretch to the end of the line
-      String[] buttonText = new String[3];
+      String[] buttonText; //The text of each button
       buttonText = split(currentLine, ", "); //Everything on currentLine should be put into an array, seperated by commas (there can only be three things)
       i++; //Increasing i by 1 puts the current line at the line after the carat, which tells the screens each button should lead to. 
-      int[] goesTo = new int[3];
+      int[] goesTo; //Where each  button points to 
       goesTo = int(split(storyline[i], ", ")); //Same deal as buttons.
       screens.add(new Screen(title, text, buttonText, goesTo)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
     }

@@ -1,23 +1,24 @@
+Clothing Choice: 1, 2, 3
+TalkedTo: 1, 2, 3
 
 0
 #
 Placeholder
-This text is here for a screen that will be further developed at a later date. Come back here in the future! If you want to get back to safety, security, and existence, click one of the buttons down below: all will restart you for the time being. Or take solace, and remain in this realm for all eternity by clicking the third. Your move.
-
->Escape This Placeholder Realm, Escape This Placeholder Realm, Remain In This Placeholder Realm
-1, 1, 0
+Placeholder
+>Escape This Placeholder Realm, Remain In This Placeholder Realm
+1, 0
 
 1
 #
-Begin
+SchoolQuest: Begin
 A young man sits curled in a fetal position under the covers of his bed, snoring loudly. Unfortunately for him, his alarm clock has begun to ring loudly (though he has not yet become aware of it). However, in his deep sleep, his mind is unable to come up with his name. Shocking. As it so turns out, this young man is you! What will this young man’s name be? 
 
 The young man’s name is what, again? @PlayerName
 
 (If the young man was able to hear, he might hear a voice whispering, “use the keyboard, hit enter once you’ve finished...” followed by a faint, “and even if it looks like things aren’t working, they are...it simply may not draw it..." and then something that sounds along the lines of “if you leave without naming, you will be named Zack...")
 
->Exist, Awake, Refuse to Conform
-4, 4, 2
+>Exist, Refuse to Conform, Quit
+4, 2, 0
 
 2
 #
@@ -25,22 +26,22 @@ A Hero Does Not Exist
 Unwilling to conform to the demands of any game creator, @PlayerName, you refuse to create yourself. Perhaps you even refuse to name yourself, a mere “PlayerName,” a blank canvas that you refused to paint as your masterpiece. Regardless of what prompted it, you do not yet exist. Would you like to continue this nonexistence, or begin anew, a fresh start?
 
 What will you do?
->Restart, Put This Silliness Behind You and Be, Continue Not Being
-0, 4, 3
+>Restart, Continue Not Being
+1, 3
 
 3
 #
-A Hero is Persistant
+A Hero is Persistent
 You aren’t. You simply are not. If you were another sort of person, a different @PlayerName, maybe your resolve would have been tested by now. Different @PlayerNames are not you, though. They don’t have your will of steel, your balls of adamantium, your lack of courage. Nonexistence is the way of the future. 
 
 But, like, if you think hard enough, maybe you’ll realize that you want to exist after all?
->Restart, Seriously Consider Non-Nonexistence (And Then Non-Nonexist), Remain Steadfast in Your Endeavor
-1, 4, 0
+>Restart, Seriously Consider Non-Nonexistence (And Then Non-Non-exist), Remain Steadfast in Your Endeavor
+1, 1, 0
 
 4
 #
 A Hero is Born
-Suddenly cognizant of your name, you groan. The jogging of your memory was all your mind needed to notify you of the incessant ringing of the nearby alarm clock, informing you of the need to wake up. Today is, as luck would have it, the first day of the 9th grade. Yet @PlayerName, while aware of its presence, has not yet been fully roused by his alarm clock. Meaning, of course, you remain asleep under the covers, though with enough willpower you could likely wake yourself from your slumber.
+Suddenly cognizant of your name, you groan. The jogging of your memory was all your mind needed to notify you of the incessant ringing of the nearby alarm clock, informing you of the need to wake up. Today is, as luck would have it, the first day of the 9th grade. Yet @PlayerName, while aware of its presence, has not yet been fully roused by his alarm clock. Meaning, of course, you remain asleep under the covers, though with enough willpower you could likely wake yourself from your slumber, and begin SchoolQuest (if your life HAD a name, that is).
 
 What will you do?
 >Wake Yourself With Sheer Willpower, Ignore Alarm, Continue Sleeping
@@ -52,7 +53,7 @@ A Hero Has Overslept
 Shaking off the protective cover that is the night realm, you awake from your deep sleep, your usual school-day routine. Hopping to your feet, you shake his head to relieve yourself of fatigue, before glancing over at the alarm clock. 7:15. Crap. Unfortunately, you’re still a little rusty from the summer, and you slightly missed the mark, and slept through an extra cycle of the snooze button; 21 times was, it seems, a time too many. The bus leaves at 7:30, and you’ve yet to even get ready yet. 
 
 Sighing, you open your closet to get dressed. How will you clothe yourself?
->For School, For The Fans, ...no.
+>For School, For The Fans, ...no?
 6, 7, 8
 
 6
@@ -73,8 +74,8 @@ Ready to rumble, you throw upon the doors to your closet, before realizing that 
 But you’re going to be late, no matter how stellar you look, and you still haven’t even eaten breakfast. Hop to it!
 
 >Go Downstairs, Look Around Room, Placeholder
-10, 9, 0
 
+10, 9, 0
 8
 #
 A Hero Dislikes Societal Constructs
@@ -87,9 +88,8 @@ But obviously, showing up late would vastly diminish the effect of said statemen
 9
 #
 A Hero Gets Acquainted 
-You’re in no real sort of hurry. The bus leaves when it leaves...if you’re on it, so be it. As such, @PlayerName stops to enjoy the view for a little bit. In the past, you were a bit of a video game lover...well, you still are, but you used to be one, too. The walls of the room are covered in posters for this and that. 
+You’re in no real sort of hurry. The bus leaves when it leaves...if you’re on it, so be it. As such, @PlayerName stops to enjoy the view for a little bit. In the past, you were a bit of a video game lover...well, you still are, but you used to be one, too. The walls of the room are covered in posters for this and that, and your shelves are adorned with books. Lots and lots of books. Luckily, you decided to stop before running downstairs, and as such remember that you have...
 
-CURRENTLY PLACEHOLDER FOR MORE PLOT AND POTENTIAL OTHER THINGS.
 
 >Go Downstairs, Cry Tears of Placeholders, Place Your Hold
 10, 0, 0
@@ -110,15 +110,17 @@ The name of @PlayerName’s best friend is @FriendName, yes?
 
 (If the little man in your head could talk, he’d tell you that you’ve done something similar to this before...)
 
->Jog Memory, Placeholder, Placeholder
-14, 0, 0
+>Jog Memory
+14
 
 12
 #
 A Hero Needs Sustenance
-Placeholder at the moment.
-> Run To The Bus, Placeholder, Placeholder
-0, 0, 0
+No man can function on an empty stomach, damn it! Deciding that your bus leaves when your stomach is sufficiently filled, you decide to make yourself a nice bowl of cereal to start the day of RIGHT. First day of 9th grade, after all, gotta make it special. Unfortunately, as it begins to dawn on you, you lack any cereal whatsoever! Having been craving cereal the evening prior, you managed to consume an entire box all on your own, and lack any to create a sufficient bowl for yourself at the present moment. Shucks! 
+
+What will you do?
+>Screw Breakfast. Can’t Miss That Bus!, Eat Something Else, SchoolQuest? More Like CerealQuest! Finding Cereal Is Priority No. 1!
+11, 31, 32
 
 13
 #
@@ -177,13 +179,13 @@ Keeping your head down, you quicken your already-fast pace in an effort to spend
 20
 #
 A Hero Arrives 
-@FriendName in tow, you step onto your school bus, wanting—understandably—not to miss your first day of school. So many familiar faces that you had no desire to see again, but hey, that’s life, eh? Weaving between outstretched legs, you and @FriendName make your way to the back of the bus (your seat is always the 2nd from the left in the back row of 5, with @FriendName sitting right beside you). New year, same seating arrangement, with @EnemyName in the row ahead of you, friend on her right side (a nasty girl by the name of Janet), along with Chuck and Taylor in the opposite (for all their positive qualities, they always seemed to talk exclusively about shoes). 
+@FriendName in tow, you step onto your school bus, wanting—understandably—not to miss your first day of school. So many familiar faces that you had no desire to see again, but hey, that’s life, eh? Weaving between outstretched legs, you and @FriendName make your way to the back of the bus (your seat is always the 2nd from the left in the back row of 5, with @FriendName sitting right beside you). New year, same seating arrangement, with @EnemyName in the row ahead of you, friend on her right side (a nasty girl by the name of Janet), along with Chuck and Taylor in the opposite (for all their positive qualities, the brothers always seemed to talk exclusively about shoes). 
 
 As more and more kids file in, you glance over to the right of you. Huh. No sign of any of your other amigos. Glancing down at your watch, you make note of the time: 7:29. After a half dozen complaints of kids missing school by deliberately holding the bus, the schools nearby put in place a zero-tolerance policy on missing the bus. If you weren’t there at 7:30:00, the bus was gone, no ifs, ands, or buts. 
 
 And just on time, the sound of the bus wheels turning shuts up your internal monologue. Guess friend two and three didn’t make it. Sighing, you glance down at your hands. How will you spend your bus ride?
 
->Introspecting, Making Conversation With The Bus Folk, Gaming. Always.
+>Introspection. Silently., Making Conversation With The Bus Folk, Gaming. Always.
 21, 22, 23
 
 21
@@ -193,28 +195,161 @@ Looking down at the palms of your hands, you decide to spend the duration of you
 
 Does that maybe say something about you? What could it mean? It’s kind of scary to look inwards and see absolutely nothing! But regardless of the deeper meanings it could hold, your introspection is promptly cut off by your arrival at school. Day 1 of 180. Sigh. The bus slows to a halt, the door sliding open, and like a pack of animals, your classmates push each other out of the way in their rush to get out. 
 
-Yawning, you straighten your back, and pull @FriendName up along with you. What will you do?
+Yawning, you straighten your back, and glance over at @FriendName, who seems hesitant to stretch is legs. What will you do?
 
-> Begin The School Day, Placeholder, The Bastards Can’t Make Me! 
-24, 2, 3
+> Grab @FriendName’s Hand, Begin The School Day, I’m Never Leaving. The Bastards Can’t Make Me! 
+28, 0, 0
 
 22
 #
 A Hero Converses
-X
-> X, X, X
-1, 2, 3
+Glancing wistfully at your bag, you decide not to open your computer for the duration of the bus ride. You’re going to start this year off with a bang, in the form of social interaction. And yet, as you turn your head to glance at those around you (the aforementioned @FriendName, @EnemyName and @LackeyName, and of course, the shoe-loving Chuck and Taylor, who are both gingers, ironically), you can’t quite make up your mind as to where your conversation should be diverted to. @FriendName is an oldie but goodie, of course, having stood by you for the majority of your life thus far, though you could be crazy and talk to @EnemyName instead. Or Chuck and Taylor, of course, but they seem all tied up at the moment. Still, new year, new @PlayerName, after all. 
+
+In any case, you’ve only so long before the ride goes by without any conversation whatsoever. Who will you talk to?
+
+> @FriendName, @EnemyName, Chuck and Taylor
+23, 24, 25
 
 23
 #
-A Hero Enjoys Himself
-X
-> X, X, X
-1, 2, 3
+A Hero Keeps His Friends Close
+Ah, how could you choose any but your trusty best friend, @FriendName? He’s stood by you your whole life—and your whole summer vacation, obviously—along with every bus ride you’ve ever taken to this god forsaken campus. Of course, since you have (slightly hazy) memories of spending nearly every minute of the summer with @FriendName, there isn’t much catching up to take into account. Either way, the two of you are like peanut butter and jelly; you’ve stuck together since day one. Clearly having the same thought, @FriendName turns to face you, waving his arms excitedly.
+
+“Did you hear about the new expansion coming out for Fork Soldier, @PlayerName? Oof, Boating Clubhouse really knows how to deliver on a promise. Talk about commitment!” As per usual, video games are a staple topic in your bus conversation, and you had, in fact, watched the trailer for Fork Soldier: Shadow of Fear just the previous evening. @FriendName knew you too well. “Dude. Look at me. Of course I saw it,” you reply, laughing, “looks sweet. Like, Fork Solider on its on was great, not to mention the awesomeness that was Fork Solider: Sickness of Silhouettes..." And as bus rides usually go with the two of you, the rest of the ride passes fairly uneventfully. You barely notice your bus roll to a halt before @FriendName points it out to you. “Come on. Don’t wanna be late to the first day,” he says to you, offering his hand. Ugh. So it begins. What will you do?
+
+>Grab @FriendName’s Hand, Let @FriendName Leave First, Refuse To Leave. The Bastards Can’t Make Me!
+28, 27, 29
+
 
 24
 #
+A Hero Keeps His Enemies Closer
+Ignoring the look of panic that @FriendName fixes you with, you lean your head out to peek over at @EnemyName. As per ushe, she and @LackeyName are deep in conversation, spilling the beans to one another about the latest gossip. Barf. Though they attempt to fill the niche roll of the stereotypical movie “mean girls,” they tend to just end up annoying the rest of the word. Figures. And yet, even still, you decide that today is the day to make peace with @EnemyName (and by extension, @LackeyName, who tends to feel whatever @EnemyName tells her to feel). 
+
+“Hey, @EnemyName,” you manage to eek out, voice almost trembling. For as obnoxious as she may be, she can still come across as fairly terrifying, “how...was your summer?” Sneering, she slowly turns to look over at your, @LackeyName giggling behind her. Undeterred, you continue. “Mine was pretty...it was pretty good. @FriendName and I...we uh...we..." Unfortunately for you, your mind seems to be drawing a blank.
+
+Rolling her eyes, @EnemyName ignores you entirely, scoffing at the mere IDEA that you would initiate conversation with her. So much for making peace. And as if on cue, your bus rolls to a stop outside of your high school. So it begins.  
+
+>Grab @FriendName And Skedaddle On Outta There, Attempt To Run After @EnemyName, Refuse To Leave The Bus
+1, 2, 3
+
+25
+#
+A Hero Talks Interacts With Others
+Turning to the brothers on your right side, you attempt to start a conversation with Chuck and Taylor, before realizing the two of them are deeply involved in a heated debate about...well, whatever brothers seem to fight about. As an only child, you wouldn’t know. Though not able to catch the gist of things, you’re able to pick up on the fact that the argument seems to revolve around Chuck yelling at Taylor for being too tightly wound, always laced-up and uptight, whereas Taylor’s main argument seems to revolve around the fact that Chuck could do with some more structure and support in his life (both arguments are pretty valid, at least from the limited time you’ve spent with the brothers). But regardless of social cues you may be ignoring, you insert yourself into the conversation nonetheless, foolish as it may be. 
+
+“Hey, Chuck, Taylor. How was your summer?” Unfortunately, as your neglected to consider, your relationship with the brothers extends little beyond the limited time you spent with the two each morning on the bus. Rolling their eyes, the two brothers glare at you, before ignoring you entirely. Guess you’ll have to put a pin in things for now. Sighing, you stare blankly ahead, before realizing your bus has arrived at school without your noticing. So much for a social human being! And like the cherry on top of this proverbial ice cream sundae, @FriendName managed to sneak by you as well. Damn! What will you do?
+
+>Disembark, Run After @FriendName, Refuse To Leave. The Bastards Can’t Make Me! 
+1, 2, 3
+
+26
+#
+A Hero Enjoys Himself
+X
+>X, X, X
+1, 2, 3
+
+27
+#
+A Hero Arrives When He Arrives
+Dicks
+>D, X, F
+1, 2, 3
+
+28
+#
 A Hero Disembarks
 X
-> X, X, X
+>X, X, X
 1, 2, 3
+
+29
+#
+A Hero Remains Steadfast
+Realizing you’ve arrived, you begin to seize up. @FriendName fixes you with a quizzical look, though even after numerous attempts to prod you, you still refuse to stand up and begin the school day like a normal human being. Summer was amazing! And even now, as the school day is about to begin, you refuse to accept that it is over. It can’t be! So, common sense left by the wayside, you further plant yourself down in your chair. If they want you to attend your classes, they’re going to have to make you...probably. The school day doesn’t start until 8:00, so you turn back and leave this folley behind you. 
+
+What will you do?
+>Get Cold Feet And Run After @FriendName, Double Down And Remain Stalwart, Hide Under The Seat
+1, 2, 3
+
+30
+#
+A Hero Commits
+D
+>D, D, D
+1, 2, 3
+
+31
+#
+A
+>D
+1
+
+32
+#
+CerealQuest: Begin
+You love cereal, damn it. If you cared about education, you might find it within you to make it to school, but instead, you’ve decided to embark on an entirely separate, more linear journey to get cereal. Life is full of ups and downs, damn it, and cereal is far more important than all other things in life, bar none. Yes...CerealQuest...who needs whatever boring old hijinks the first day of 9th grade could provide? Not you, that’s who! No, you’ve committed to this. CerealQuest it is. And frankly, cereal is a pretty achievable goal in life. Cereal makes sense. As such, your pathway towards the cereal will probably be fairly linear...whatever THAT means! In any case, your school bus has long since left, the clock on your wall signaling 8:38. Of course, missing school and not being hungry do not correlate. Your stomach is still growling, and goddamn it, you want some cereal!
+
+But first, you need to possess the cereal. Time to hit the store!
+>Foray Out Into World—Cereal Is At Stake!
+33
+
+33
+#
+A Cereal Lover Is You
+Walking out the front door, you confidently stride towards the nearest grocery store, wallet in hand. Perfect. The quest for cereal could not be going more smoothly. Luckily for you, your local grocery store is directly to the west of your current location, a small, family-run establishment by the name of Joe Caputo’s Fruit Market. Joe is pretty close with your family, but you’re sure he would understand your situation entirely if you explained your true, dire need for a bowl of cereal. What kind of monster wouldn’t accept that? 
+
+Moseying to the west, the borborygmi from your stomach tip you off to the fact that you’re best get a move on if you want any chance of satiating your hunger before you die of it. Cereal is serious business, man! Luckily, you have a clear goal in mind. At this point, there’s only one real path that you could consider taking, and that’s the path that takes you towards the cereal.
+
+As luck would have it, Joe closed down his store for this Monday, on account of the first day of school for his boys (single father and all). Unfortunately this means that getting the cereal you need will be a much harder task than you had initially anticipated. Whatever, you’re in it for the cereal now. There’s no turning back, man.
+>Stare Longingly Inside of Joe’s
+34
+
+34
+#
+A Cereal Lover’s Resolve Is Tested
+Staring inside the door to Joe’s store, you curse the universe for being against you. Maybe you should have just...gone to school and sucked up the lack of breakfast...? Hell no! You’re way better than that. You’ve come so far (a block and a half at LEAST), there’s no turning back now. However, unfortunately for you, the next closest store is a 20 minute subway away, and far pricier. Screw it! You want that cereal BADLY, damn it, and you aren’t at all annoyed at the fact that you don’t seem to be given the freedom to object to the choices that are being made on your behalf. So, as fast as your little legs can carry you, your sprint to the subway stop, using a few of your hard-earned mooched dollars to grab a ticket into the city.
+
+Your cereal is so close, you can taste it. Er, well, you can taste what it would probably taste like.
+
+Victory.
+>Ride The Lightning...Rail
+35
+
+35 
+#
+A Cereal Lover Presses Onwards
+Swiping your ticket at the door, you step onto the subway, greeted by a robotic woman’s voice informing you that your stop is approximately 23 minutes away. Perfect. Soon, you’ll be in cereal city, baby. Cereal. City. Yawning, you sit down on a chair, deciding that your aching bones need to rest up following the intense ordeal you’ve had thus far. I mean, leaving the house? The trauma of a closed store? Boarding a subway? Being out of cereal, above all? Truly, this has been a traumatic morning. It would be so nice to zone out, to just let your head droop, and...and...and.....................
+
+Suddenly woken from you slumber, you jerk upright, only to realize that the subway is about to arrive at your stop. Sweet! At least you didn’t miss it...that would’ve been rough. Stretching you back out, you get to your feet, reading to disembark from the metal train. Cereal, here you come! 
+
+The car rolls to a stop, and you fall forwards along with it—damn you, inertia! Dusting yourself off, you get ready to disembark from the subway. Cereal, straight ahead!
+>Abscond From The Subway
+36
+
+36
+#
+A Cereal Lover Pursues Their Goal Single-mindedly
+Legs pumping, you manage to excavate yourself from the subway station. The store is only a few minutes away from your current location, which means that your cereal is only a few minutes away as well. Score! Almost tripping over yourself in your hurry to receive your box of cereal, you sprint full-speed ahead towards the grocery store. In a less dire situation, you might think your actions a bit funny, but lack of cereal is no laughing matter. Breakfast is the most important meal of the day.
+
+And what’s this? Your running paid off! Faster than you could say, “I really want a bowl of cereal please just give me some cereal I’ll pay you for simply a bowl of cereal thanks,” you’ve arrived in front of the grocery store. And this time, the store seems opened. Only one thing stands between you and cereal: the door. Well, and picking out the cereal, the checkout line, paying, walking through the store...but really, just a door.
+
+Moment of truth. It’s cereal time! Unfortunately, the label on the door is slightly worn away, only displaying the letters ‘pu,’ but not the other two letters which would determine the action to open said door. How will you go about things?
+>Push The Door, Pull The Door
+37, 37
+
+37
+#
+A Cereal Lover Struggles
+Though you try in vain to open the door, it doesn’t budge. Unfortunately, you choice of opening method wasn’t the right one, and the door mocks you for being stupid enough to consider it in the first place. Sighing, you switch to the OPPOSITE method of opening—you aren’t a pusillanimous loser, giving up after a simple door misunderstanding! No, giving it all you’ve got, you manage to make your way inside the store, door no longer posing you an obstacle. Alas! You’ve arrived! Grinning from ear to ear, you make your way to the cereal aisle, spying a box of your favorite cereal, Frosted Cinnamon Charms. Truly, a gateway to diabetes, but a delicious one at that. Jovially, you thrust out your arm, hoisting the box of cereal above your head, before hastily making your way to the checkout line. The cereal...you’ve obtained it. 
+
+VICTORY. YOU WIN. A CEREAL LOVER IS YOU.
+
+The End.
+
+Play again?
+
+>Restart, Quit
+1, 0
+
