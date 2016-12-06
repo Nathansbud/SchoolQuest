@@ -4,37 +4,67 @@
  
  */
 
+import ddf.minim.*; //Minim starts here...
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*; //...and it ends here. 
+import java.lang.Object; //JFileChooser starts here...
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Window; 
+import java.awt.Dialog;
+import java.awt.FileDialog;
+import javax.swing.JComponent;
+import javax.swing.JFileChooser; //...and it ends here.//FileNameExtensionFilter starts here...
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;  //...and it ends here.
+
+Minim minim;
+AudioPlayer selectedSong;
+AudioOutput note;
 String storyline[]; //Array of Text. This makes all the everything work.
-String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet"; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
+String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet", tempPlayerName = ""; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
 ArrayList<Screen> screens; 
 int currentScreen = 1; //Current screen in the screens ArrayList being shown
-//boolean playerNameSelected;
-//boolean friendNameSelected;
-//boolean enemyNameSelected;
-boolean mouseIsReleased, drawScreen = true; //Used to trigger button presses
+int loopCount = 10000;
+boolean mouseIsReleased, drawScreen, songSelected; //Used to trigger button presses
+String songName;
+
+
+
 
 void setup()
 {
   fullScreen();
+  minim = new Minim(this);
+  note = minim.getLineOut();
   screens = new ArrayList<Screen>();
-  storyline = loadStrings("textadventure.zk");
+  drawScreen = true;
+  storyline = loadStrings("SchoolQuest.zk");
   Parse();
 }
 
 void draw()
 {
-  if(currentScreen == 0)
+  if (songSelected)
   {
-   drawScreen = false;
+    PlayMusic(); 
+    songSelected = false;
+  }
+  if (currentScreen == 0)
+  {
+    drawScreen = false;
   }
   if (screens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
   {
-    if(drawScreen)
+    if (drawScreen)
     {
-    screens.get(currentScreen).Update();
+      screens.get(currentScreen).Update();
     } else
     {
-     exit(); 
+      exit();
     }
   }
   mouseIsReleased = false; //mouseIsReleased is continually set to false so that the releasing of mouse is only registered for one frame, else would trigger buttons at any time
@@ -119,7 +149,16 @@ void Parse() //The real bread and butter of the program
   }
 }
 
+void PlayMusic()
+{
+  selectedSong = minim.loadFile(songName);
+  selectedSong.loop(loopCount);
+}
+
 void mouseReleased()
 {
-  mouseIsReleased = true; //True for a frame only, which is enough to check for button presses
+  if (screens.size() > 0)
+  {
+    mouseIsReleased = true; //True for a frame only, which is enough to check for button presses
+  }
 }

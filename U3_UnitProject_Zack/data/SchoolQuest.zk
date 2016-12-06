@@ -1,3 +1,5 @@
+Welcome to SchoolQuest!
+
 Clothing Choice: 1, 2, 3
 TalkedTo: 1, 2, 3
 
@@ -5,8 +7,7 @@ TalkedTo: 1, 2, 3
 #
 Placeholder
 Placeholder
->Escape This Placeholder Realm, Remain In This Placeholder Realm
-1, 0
+> 
 
 1
 #
@@ -36,7 +37,7 @@ You aren’t. You simply are not. If you were another sort of person, a differen
 
 But, like, if you think hard enough, maybe you’ll realize that you want to exist after all?
 >Restart, Seriously Consider Non-Nonexistence (And Then Non-Non-exist), Remain Steadfast in Your Endeavor
-1, 1, 0
+1, 1, 1
 
 4
 #
@@ -74,7 +75,6 @@ Ready to rumble, you throw upon the doors to your closet, before realizing that 
 But you’re going to be late, no matter how stellar you look, and you still haven’t even eaten breakfast. Hop to it!
 
 >Go Downstairs, Look Around Room, Placeholder
-
 10, 9, 0
 8
 #
@@ -120,7 +120,7 @@ No man can function on an empty stomach, damn it! Deciding that your bus leaves 
 
 What will you do?
 >Screw Breakfast. Can’t Miss That Bus!, Eat Something Else, SchoolQuest? More Like CerealQuest! Finding Cereal Is Priority No. 1!
-11, 31, 32
+11, 31, 32w
 
 13
 #
@@ -129,7 +129,7 @@ Do that yo
 
 The name of @PlayerName’s best friend is @FriendName, yes?
 
-> Placeholder, Placeholder, Placeholder
+>Placeholder, Placeholder, Placeholder
 0, 0, 0
 
 14
@@ -197,7 +197,7 @@ Does that maybe say something about you? What could it mean? It’s kind of scar
 
 Yawning, you straighten your back, and glance over at @FriendName, who seems hesitant to stretch is legs. What will you do?
 
-> Grab @FriendName’s Hand, Begin The School Day, I’m Never Leaving. The Bastards Can’t Make Me! 
+>Grab @FriendName’s Hand, Begin The School Day, I’m Never Leaving. The Bastards Can’t Make Me! 
 28, 0, 0
 
 22
@@ -207,7 +207,7 @@ Glancing wistfully at your bag, you decide not to open your computer for the dur
 
 In any case, you’ve only so long before the ride goes by without any conversation whatsoever. Who will you talk to?
 
-> @FriendName, @EnemyName, Chuck and Taylor
+>@FriendName, @EnemyName, Chuck and Taylor
 23, 24, 25
 
 23
@@ -246,7 +246,7 @@ Turning to the brothers on your right side, you attempt to start a conversation 
 26
 #
 A Hero Enjoys Himself
-X
+Looking at the options you’ve been presented with, you decide that social interaction is not the way to go on your first day of 9th grade. What good have people ever been for you? Even @FriendName, though you love him dearly, cannot possibly hope to 
 >X, X, X
 1, 2, 3
 

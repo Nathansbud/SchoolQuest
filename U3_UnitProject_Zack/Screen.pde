@@ -1,12 +1,16 @@
 class Screen //<>//
 {
   private Button[] _options;
+  private Button _musicSelector;
   private String[] _buttonText; //= new String[3];
   public int[] _goesTo; //= new int[3];
   private String _title;
   private String _text;
   private int _tbW, _tbH; //Text Box Width and Height
   private int _textSize;
+  JFileChooser _fc;
+  FileNameExtensionFilter _filter;
+  boolean _buttonPressed;
 
   Screen(String title, String text, String[] buttonText, int[] goesTo)
   {
@@ -26,66 +30,110 @@ class Screen //<>//
     DrawButtons(); //Draws buttons
     UpdateNames(); //Updates names
     DrawText();
-    for (int i = 0; i < 1; i++)
+    int x = _buttonText.length;
+    switch(x)
     {
-      println("Buttons Lead To: " + _goesTo[i] + ", " + _goesTo[i + 1] + ", " + _goesTo[i + 2] + " & Screen Is: " + currentScreen);
+    case 1:
+      println("Buttons Lead To: " + _goesTo[x - x] + " & Screen Is: " + currentScreen);
+      break;
+    case 2:  
+      println("Buttons Lead To: " + _goesTo[x - x] + ", " + _goesTo[x - 1] + " & Screen Is: " + currentScreen);
+      break;
+    case 3:
+      println("Buttons Lead To: " + _goesTo[x - x]+ ", " + _goesTo[x - 2] + ", " + _goesTo[x - 1] + " & Screen Is: " + currentScreen);
+      break;
+    default:
+      println("There Are No Buttons On Screen! Screen: " + currentScreen);
+      break;
     }
   }
 
-  private void DrawButtons() //Draws 3 buttons, assigns to them the goesTo information from Parse() 
+  private void DrawButtons()
+  {
+    DrawOptions();
+    DrawMusicSelector();
+  }
+
+  private void DrawOptions() //Draws 3 buttons, assigns to them the goesTo information from Parse() 
   {
     for (int i = 0; i < _buttonText.length; i++) //Make as many buttons as there are labels for, no more no less; if 2 labels, 2 buttons; if 3 labels, 3 buttons.
     {
-      _options[i] = new Button(_buttonText[i], width/2 - _buttonText[i].length(), height - height/3 + (height/18 * i), _goesTo[i]);
+      _options[i] = new Button(_buttonText[i], width/2 - _buttonText[i].length(), height - height/3 + (height/18 * i), _goesTo[i], 4 - i);
     }
-  }
-
-  private void UpdateNames()
-  {
     for (int i = 0; i < _buttonText.length; i++) //Updates said buttons
     {
       _options[i].Update();
     }
-    if (playerName != "") //If no player name is set, playerName = Zack
-    {
-      _text = _text.replaceAll("@PlayerName", playerName);
-      for (int i = 0; i < _buttonText.length; i++)
-      {
-        _buttonText[i] = _buttonText[i].replaceAll("@PlayerName", playerName);
-      }
-    }
-    if (currentScreen > 1 && playerName == "")
-    {
-      playerName = "Zack";
-    }
+  }
 
-    if (friendName != "") //If no friend name is set, friendName = Abhay
-    {
-      _text = _text.replaceAll("@FriendName", friendName);
-      for (int i = 0; i < _buttonText.length; i++)
-      {
-        _buttonText[i] = _buttonText[i].replaceAll("@FriendName", friendName);
-      }
-    } 
-    if (currentScreen > 13 && friendName == "")
-    {
-      friendName = "Abhay";
-    }
+  private void DrawMusicSelector()
+  {
+    _musicSelector = new Button(" Music Selector ", float(width - width/12), float(height - height/3)); 
+    _musicSelector.Update2();
+  }
 
-    if (enemyName != "") //If no enemy name is set, enemyName = Rana
+
+  private void UpdateNames()
+  {
+    if (currentScreen < 33 || currentScreen > 37)
     {
-      _text = _text.replaceAll("@EnemyName", enemyName);
-      _text = _text.replaceAll("@LackeyName", lackeyName);
-      for (int i = 0; i < _buttonText.length; i++)
+
+      if (currentScreen == 1 && playerName != "" && keyPressed && key == ENTER) //If no player name is set, playerName = Zack
       {
-        _buttonText[i] = _buttonText[i].replaceAll("@EnemyName", enemyName);
-        _buttonText[i] = _buttonText[i].replaceAll("@LackeyName", lackeyName);
+        _text = _text.replaceAll("@PlayerName", playerName);
       }
-    } 
-    if (currentScreen > 14 && enemyName == "")
-    {
-      enemyName = "Ranine";
-      lackeyName = "Janet";
+
+      if (currentScreen > 1 && playerName != "")
+      {
+        _text = _text.replaceAll("@PlayerName", playerName);
+        for (int i = 0; i < _buttonText.length; i++)
+        {
+          _buttonText[i] = _buttonText[i].replaceAll("@PlayerName", playerName);
+        }
+      }
+
+      if (currentScreen > 1 && playerName == "")
+      {
+        playerName = "Zack";
+      }
+
+      if ((currentScreen == 11 || currentScreen == 13) && friendName != "" && keyPressed && key == ENTER)
+      {
+        _text = _text.replaceAll("@FriendName", friendName);
+      }
+
+      if (currentScreen > 13 && friendName != "") //If no friend name is set, friendName = Abhay
+      {
+        _text = _text.replaceAll("@FriendName", friendName);
+        for (int i = 0; i < _buttonText.length; i++)
+        {
+          _buttonText[i] = _buttonText[i].replaceAll("@FriendName", friendName);
+        }
+      } 
+      if (currentScreen > 13 && friendName == "")
+      {
+        friendName = "Abhay";
+      }
+
+      if (currentScreen == 14 && enemyName != "" && keyPressed && key == ENTER)
+      {        
+        _text = _text.replaceAll("@EnemyName", enemyName);
+      }
+      if (currentScreen > 14 && enemyName != "") //If no enemy name is set, enemyName = Rana
+      {
+        _text = _text.replaceAll("@EnemyName", enemyName);
+        _text = _text.replaceAll("@LackeyName", lackeyName);
+        for (int i = 0; i < _buttonText.length; i++)
+        {
+          _buttonText[i] = _buttonText[i].replaceAll("@EnemyName", enemyName);
+          _buttonText[i] = _buttonText[i].replaceAll("@LackeyName", lackeyName);
+        }
+      } 
+      if (currentScreen > 14 && enemyName == "")
+      {
+        enemyName = "Ranine";
+        lackeyName = "Janet";
+      }
     }
   }
   private void DrawText()
