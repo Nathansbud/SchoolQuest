@@ -4,28 +4,29 @@ class Button
   private float _posX, _posY, _labelTextSize, _buttonWidth, _buttonHeight, _buttonPosX;
   private int _buttonCurve;  
   private int _goesTo;
+  private int _textColor, _buttonColor;
   private boolean _buttonPressed;
   JFileChooser _fc;
   FileNameExtensionFilter _filter;
+  JDialog dialog;
 
-  private int _octave;
-
-  public Button(String labelText, float posX, float posY, int goesTo, int octave) 
+  public Button(String labelText, float posX, float posY, int goesTo) 
   {
     _goesTo = goesTo;
     _labelText = labelText;
-    _octave = octave;
     _labelTextSize = width/72;
     _posX = posX;
     _posY = posY;
     _buttonHeight = height/30;
     _buttonCurve = 12;
     _labelTextSize = 20;
+    _textColor = 0;
+    _buttonColor = 255;
     _buttonWidth = textWidth(_labelText); //Width of buttons is the horizontal size of the button label.
     _buttonPosX = _posX - 0.5 * textWidth(_labelText); //Button positioning is at centerpoint of text - half of the text's horizontal length.
   }
 
-  public Button(String labelText, float posX, float posY)//,// boolean buttonPressed2) 
+  public Button(String labelText, float posX, float posY) 
   {
     _labelText = labelText;
     _labelTextSize = width/72;
@@ -34,19 +35,19 @@ class Button
     _buttonHeight = height/30;
     _buttonCurve = 12;
     _labelTextSize = 20;
+    _textColor = 0;
+    _buttonColor = 255;
     _buttonWidth = textWidth(_labelText); //Width of buttons is the horizontal size of the button label.
     _buttonPosX = _posX - 0.5 * textWidth(_labelText); //Button positioning is at centerpoint of text - half of the text's horizontal length.
-    _fc = new JFileChooser();
-    _filter = new FileNameExtensionFilter("Music Files", "mp3", "wav", "m4a");
   }
 
   private void Draw()
   {
 
     textAlign(CENTER); //Text alligned in the center for tidiness and aesthetics
-    fill(255);
+    fill(_buttonColor);
     rect(_buttonPosX, _posY, _buttonWidth, _buttonHeight, _buttonCurve);
-    fill(0);
+    fill(_textColor);
     textSize(_labelTextSize);
     text(_labelText, _posX, _posY + _labelTextSize);
     textAlign(LEFT); //Realligned to left for everything else
@@ -63,53 +64,75 @@ class Button
       if (_buttonPressed)
       {
         currentScreen = _goesTo;
-        //note.playNote("E" + _octave);
-        //note.playNote("E" + (_octave + 1));
+      }
     }
   }
-}
 
-public void CheckPresses2()
-{
-  if (mouseIsReleased) //If mouse ever released, check if mouse is over button. If so, button has been pressed, and currentScreen = that button's "_goesTo"
+  public void CheckPresses2()
   {
-    if (mouseX > _buttonPosX && mouseX < _buttonPosX + _buttonWidth && mouseY > _posY && mouseY < _posY + _buttonHeight)
+    if (mouseIsReleased) //If mouse ever released, check if mouse is over button. If so, button has been pressed, and currentScreen = that button's "_goesTo"
     {
-      _buttonPressed = true;
+      if (mouseX > _buttonPosX && mouseX < _buttonPosX + _buttonWidth && mouseY > _posY && mouseY < _posY + _buttonHeight)
+      {
+        _buttonPressed = true;
+      }
+      if (_buttonPressed)
+      {
+        FileSelector();
+      }
     }
-    if (_buttonPressed)
+  }
+
+  public void CheckPresses3()
+  {
+    if (mouseIsReleased) //If mouse ever released, check if mouse is over button. If so, button has been pressed, and currentScreen = that button's "_goesTo"
     {
-      FileSelector();
+      if (mouseX > _buttonPosX && mouseX < _buttonPosX + _buttonWidth && mouseY > _posY && mouseY < _posY + _buttonHeight)
+      {
+        _buttonPressed = true;
+      }
+      if (_buttonPressed)
+      {
+        state = _goesTo;
+      }
     }
   }
-}
 
-
-
-public void Update()
-{
-  Draw();
-  CheckPresses();
-}
-
-public void Update2()
-{
-  Draw();
-  CheckPresses2();
-}
-
-private void FileSelector()
-{
-  _fc.setDragEnabled(true);
-  _fc.setFileFilter(_filter);
-  int r = _fc.showOpenDialog(null);
-  if (r == _fc.APPROVE_OPTION) 
+  public void Update()
   {
-    songName = _fc.getSelectedFile().getAbsolutePath();
-    songSelected = true;
-  } else
-  {
-    _fc.cancelSelection();
+    Draw();
+    CheckPresses();
   }
-}
+
+  public void Update2()
+  {
+    Draw();
+    CheckPresses2();
+  }
+
+  public void Update3()
+  {
+    Draw();
+    CheckPresses3();
+  }
+
+  private void FileSelector()
+  {
+    _fc = new JFileChooser();
+    _fc.setCurrentDirectory(new File(System.getProperty("user.home")));
+    _filter = new FileNameExtensionFilter("Music Files", "mp3", "wav");
+    _fc.setDragEnabled(true);
+    _fc.setFileFilter(_filter);
+    _fc.setCurrentDirectory(new File(System.getProperty("user.home")));
+    int result  = _fc.showOpenDialog(null);
+    if (result == _fc.APPROVE_OPTION) 
+    {
+      File selectedFile = _fc.getSelectedFile();
+      songName = selectedFile.getAbsolutePath();
+      songSelected = true;
+    } else
+    {
+      _fc.cancelSelection();
+    }
+  }
 }

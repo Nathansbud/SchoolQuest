@@ -1,4 +1,4 @@
-/* SchoolQuest (Working Title) //<>//
+/* SchoolQuest (Working Title) //<>// //<>//
  
  A text adventure by Zack.
  
@@ -20,27 +20,37 @@ import javax.swing.JComponent;
 import javax.swing.JFileChooser; //...and it ends here.//FileNameExtensionFilter starts here...
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;  //...and it ends here.
+import javax.swing.JDialog;
 
 Minim minim;
 AudioPlayer selectedSong;
 AudioOutput note;
 String storyline[]; //Array of Text. This makes all the everything work.
-String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet", tempPlayerName = ""; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
-ArrayList<Screen> screens; 
-int currentScreen = 1; //Current screen in the screens ArrayList being shown
+String[] menuButtons = {"SchoolQuest", "The Void", "Quit"};
+String[] playerLastNames = {"Amiton", "Zinner", "Ostomel", "Stevenson"}, friendLastNames = {"Johnson", "Peterson", "Mitchell", "Anderson"};
+String friendLastName,  playerLastName;
+String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet"; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
+ArrayList<Screen> schoolQuestScreens, voidScreens; 
+Screen menuScreen;
+int currentScreen; //Current screen in the screens ArrayList being shown
 int loopCount = 10000;
 boolean mouseIsReleased, drawScreen, songSelected; //Used to trigger button presses
 String songName;
-
-
-
+boolean[] clothingChoice = new boolean[3];
+int state;
+int time;
+int playerLockerNumber, friendLockerNumber;
 
 void setup()
 {
   fullScreen();
+  state = 0;
+  currentScreen = 1;
   minim = new Minim(this);
-  note = minim.getLineOut();
-  screens = new ArrayList<Screen>();
+  playerLastName = playerLastNames[(int)random(0, 4)];
+  friendLastName = friendLastNames[(int)random(0, 4)];
+  schoolQuestScreens = new ArrayList<Screen>();
+  voidScreens = new ArrayList<Screen>();
   drawScreen = true;
   storyline = loadStrings("SchoolQuest.zk");
   Parse();
@@ -48,30 +58,55 @@ void setup()
 
 void draw()
 {
+  CheckBooleans();
   if (songSelected)
   {
     PlayMusic(); 
     songSelected = false;
   }
+  switch(state)
+  {
+  case 0:
+    menuScreen = new Screen("\n\n\n\n\n\n\nChoose a Text Adventure", " ", menuButtons, 255);
+    menuScreen.UpdateMenu();
+    break;
+  case 1:  
+    if (schoolQuestScreens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
+    {
+      if (drawScreen)
+      {
+        schoolQuestScreens.get(currentScreen).Update();
+      } else
+      {
+        exit();
+      }
+    }
+    break;
+  case 2:
+    if (voidScreens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
+    {
+      if (drawScreen)
+      {
+        voidScreens.get(currentScreen).Update();
+      } else
+      {
+        exit();
+      }
+    }
+    break;
+  case 3:
+    exit();
+  }
+
   if (currentScreen == 0)
   {
     drawScreen = false;
-  }
-  if (screens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
-  {
-    if (drawScreen)
-    {
-      screens.get(currentScreen).Update();
-    } else
-    {
-      exit();
-    }
   }
   mouseIsReleased = false; //mouseIsReleased is continually set to false so that the releasing of mouse is only registered for one frame, else would trigger buttons at any time
 }
 
 void keyPressed() //Replaces all @CharacterNames with player-inputted ones. However, not fully finished yet (drawing-wise, doesn't prevent player from not naming characters)
-{
+{ 
   if (currentScreen == 1) 
   {
     if (key == BACKSPACE)
@@ -118,6 +153,11 @@ void keyPressed() //Replaces all @CharacterNames with player-inputted ones. Howe
   {
     currentScreen = 1;
   }
+  if (keyCode == ALT)
+  {
+    state = 0;
+    currentScreen = 1;
+  }
 }
 
 void Parse() //The real bread and butter of the program
@@ -144,7 +184,31 @@ void Parse() //The real bread and butter of the program
       i++; //Increasing i by 1 puts the current line at the line after the carat, which tells the screens each button should lead to. 
       int[] goesTo; //Where each  button points to 
       goesTo = int(split(storyline[i], ", ")); //Same deal as buttons.
-      screens.add(new Screen(title, text, buttonText, goesTo)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
+      i++;
+      schoolQuestScreens.add(new Screen(title, text, buttonText, goesTo, 255)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
+    }
+    if (storyline[i].equals("$") || storyline[i].equals("$ ")) //Looks for the line with only a # (or # with a space, in case of accidental space, to prevent issue)
+    { //If it finds this line, it knows that a "screen chunk" is present
+      i++; //Move to next line
+      String title = storyline[i++]; //This moved-to line is the title of the screen. Record this line and increase i by 1
+      String text = ""; //This moved-to line, always after the title, begins the body text of the page. This line can go until...
+      while (storyline[i].charAt(0) != '>') //...the carat. Until the first character seen on a line is >, text is increased by each line of the storyline
+      {
+        text += storyline[i];
+        i++; //Continually iterated until it reaches the carat
+        while (storyline[i].length() == 0) //If it reaches a blank line, instead of crashing (as it would otherwise), replaces that blank line with 2 line breaks (as would be the reason for leaving a blank line in the first place)
+        {
+          storyline[i] = "\n\n";
+        }
+      }
+      String thisLine = storyline[i].substring(1, storyline[i].length()); //The current line after reaching the carat should start after the carat, and stretch to the end of the line
+      String[] buttonText; //The text of each button
+      buttonText = split(thisLine, ", "); //Everything on currentLine should be put into an array, seperated by commas (there can only be three things)
+      i++; //Increasing i by 1 puts the current line at the line after the carat, which tells the screens each button should lead to. 
+      int[] goesTo; //Where each  button points to 
+      goesTo = int(split(storyline[i], ", ")); //Same deal as buttons.
+      i++;
+      voidScreens.add(new Screen(title, text, buttonText, goesTo, 255)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
     }
   }
 }
@@ -157,8 +221,33 @@ void PlayMusic()
 
 void mouseReleased()
 {
-  if (screens.size() > 0)
+  if (storyline.length > 0)
   {
     mouseIsReleased = true; //True for a frame only, which is enough to check for button presses
   }
+}
+
+void CheckBooleans()
+{
+  //Clothing Choice Begin//
+  if (currentScreen == 6)
+  {
+    clothingChoice[0] = true;
+  }
+  if (currentScreen == 7)
+  {
+    clothingChoice[1] = true;
+  }
+  if (currentScreen == 8)
+  {
+    clothingChoice[2] = true;
+  }
+  if (clothingChoice[1] == true && currentScreen == 17)
+  {
+  }
+  if (clothingChoice[2] == true && currentScreen == 17)
+  {
+    currentScreen = 39;
+  }
+  //Clothing Choice End//
 }

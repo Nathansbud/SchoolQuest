@@ -76,6 +76,7 @@ But you’re going to be late, no matter how stellar you look, and you still hav
 
 >Go Downstairs, Look Around Room, Placeholder
 10, 9, 0
+
 8
 #
 A Hero Dislikes Societal Constructs
@@ -120,7 +121,7 @@ No man can function on an empty stomach, damn it! Deciding that your bus leaves 
 
 What will you do?
 >Screw Breakfast. Can’t Miss That Bus!, Eat Something Else, SchoolQuest? More Like CerealQuest! Finding Cereal Is Priority No. 1!
-11, 31, 32w
+11, 31, 32
 
 13
 #
@@ -215,7 +216,7 @@ In any case, you’ve only so long before the ride goes by without any conversat
 A Hero Keeps His Friends Close
 Ah, how could you choose any but your trusty best friend, @FriendName? He’s stood by you your whole life—and your whole summer vacation, obviously—along with every bus ride you’ve ever taken to this god forsaken campus. Of course, since you have (slightly hazy) memories of spending nearly every minute of the summer with @FriendName, there isn’t much catching up to take into account. Either way, the two of you are like peanut butter and jelly; you’ve stuck together since day one. Clearly having the same thought, @FriendName turns to face you, waving his arms excitedly.
 
-“Did you hear about the new expansion coming out for Fork Soldier, @PlayerName? Oof, Boating Clubhouse really knows how to deliver on a promise. Talk about commitment!” As per usual, video games are a staple topic in your bus conversation, and you had, in fact, watched the trailer for Fork Soldier: Shadow of Fear just the previous evening. @FriendName knew you too well. “Dude. Look at me. Of course I saw it,” you reply, laughing, “looks sweet. Like, Fork Solider on its on was great, not to mention the awesomeness that was Fork Solider: Sickness of Silhouettes..." And as bus rides usually go with the two of you, the rest of the ride passes fairly uneventfully. You barely notice your bus roll to a halt before @FriendName points it out to you. “Come on. Don’t wanna be late to the first day,” he says to you, offering his hand. Ugh. So it begins. What will you do?
+“Did you hear about the new expansion coming out for Fork Soldier, @PlayerName? Oof, Boating Clubhouse really knows how to deliver on a promise. Talk about commitment!” As per usual, video games are a staple topic in your bus conversation, and you had, in fact, watched the trailer for Fork Soldier: Shadow of Fear just the previous evening. @FriendName knew you too well. “Dude. Look at me. Of course I saw it,” you reply, laughing, “looks sweet. Like, Fork Solider on its own was great, not to mention the awesomeness that was Fork Solider: Sickness of Silhouettes..." And as bus rides usually go with the two of you, the rest of the ride passes fairly uneventfully. You barely notice your bus roll to a halt before @FriendName points it out to you. “Come on. Don’t wanna be late to the first day,” he says to you, offering his hand. Ugh. So it begins. What will you do?
 
 >Grab @FriendName’s Hand, Let @FriendName Leave First, Refuse To Leave. The Bastards Can’t Make Me!
 28, 27, 29
@@ -246,7 +247,9 @@ Turning to the brothers on your right side, you attempt to start a conversation 
 26
 #
 A Hero Enjoys Himself
-Looking at the options you’ve been presented with, you decide that social interaction is not the way to go on your first day of 9th grade. What good have people ever been for you? Even @FriendName, though you love him dearly, cannot possibly hope to 
+Looking at the options you’ve been presented with, you decide that social interaction is not the way to go on your first day of 9th grade. What good have people ever been for you? Even @FriendName, though you love him dearly, cannot possibly hope to present a better option of stimulation for you this morning than the metal interface in front of your eyes. And thus, tuning out the rest of the world, you double click one of the games on the computer (of which there are many indeed) and tune out the rest of the world. It’s the perfect wake-up activity in the morning, and you’re glad for the distraction of the games in front of you rather than the conversation with your peers. Though, of course, @FriendName watches you play nonetheless. Friendship comes first in life, even if you don’t necessarily put forth the effort. It’s just how friends are.
+
+Tuning your brain back in to the machinations of life, you notice the wheels of your bus slowly down as you reach your school. 
 >X, X, X
 1, 2, 3
 
@@ -260,23 +263,33 @@ Dicks
 28
 #
 A Hero Disembarks
-X
->X, X, X
-1, 2, 3
+Grabbing @FriendName’s hand, you pull yourself up out of the chair, and the dynamic duo disembarks from the school bus. Sighing, you stretch your back, an action which @FriendName instantly mirrors. Stretching is a key morning activity! You give a little yawn before staring up at the building that is to be your home for the next few years.
+
+“It looks like a prison, aye?” @FriendName says, shaking, “I mean look at this place. It’s about a stone’s throw away from being an ACTUAL jail. Smith High? More like Smith Hell, am I right?”
+
+Ignoring him, you push open the doors to the building. As the clock on the wall is eager to inform you, the first day doesn’t begin for another 10 minutes or so, giving you ample time to glance at your schedule for the day and scout out your locker. New year, new school...ugh. Scanning the hallway, you make your way to the principal’s office—@FriendName in tow—in order to pick up the necessary pieces of information for your first day. 
+
+What will you do?
+>Enter The Office, X
+39, 0
 
 29
 #
 A Hero Remains Steadfast
-Realizing you’ve arrived, you begin to seize up. @FriendName fixes you with a quizzical look, though even after numerous attempts to prod you, you still refuse to stand up and begin the school day like a normal human being. Summer was amazing! And even now, as the school day is about to begin, you refuse to accept that it is over. It can’t be! So, common sense left by the wayside, you further plant yourself down in your chair. If they want you to attend your classes, they’re going to have to make you...probably. The school day doesn’t start until 8:00, so you turn back and leave this folley behind you. 
+Realizing you’ve arrived, you begin to seize up. @FriendName fixes you with a quizzical look, though even after numerous attempts to prod you, you still refuse to stand up and begin the school day like a normal human being. Summer was amazing! And even now, as the school day is about to begin, you refuse to accept that it is over. It can’t be! So, common sense left by the wayside, you further plant yourself down in your chair. If they want you to attend your classes, they’re going to have to make you...probably. The school day doesn’t start until 8:00, so you can still turn back and leave this folley behind you. 
 
 What will you do?
 >Get Cold Feet And Run After @FriendName, Double Down And Remain Stalwart, Hide Under The Seat
-1, 2, 3
+1, 30, 3
 
 30
 #
 A Hero Commits
-D
+No! You refuse to simply give up everything you stand for and hastily follow behind @FriendName—you’re @PlayerName, for goodness’ sake! They can’t make you do anything—you’re your own man, damn it. So, ignoring what others might call “common sense,” you remain on your school bus. And by God, it’s liberating. The world is your goddamn oyster! Frankly, you’re near god-like; what mere mortal can boss @PlayerName around after an experience like this. The thrill of defiance has overcome you...you're unstoppable.
+
+Yet, in all your reveling, you forget to make a simple logical assumption. Unfortunately for you, you tend to disembark the school bus each morning without giving things a second, though this is simply not an option today. As you slowly come to realize, the busses don’t exactly remain where you leave them, eager to drop you home each day. No, the busses get driven elsewhere, far away from your school campus. To your horror, though you may have been trying on defiance for size, you were not anticipating the screeching of the tires as the bus rolls away from the campus. Regardless of whether or not you’d truly thought things through, you’re trapped now, your campus shrinking as the vehicle speeds away. Shoot. 
+
+What will you do? 
 >D, D, D
 1, 2, 3
 
@@ -352,4 +365,567 @@ Play again?
 
 >Restart, Quit
 1, 0
+
+38
+#
+A Hero Is Judged
+Sauntering up to @FriendName’s house, you confidently rap on the door, ready for your first day of classes. Unfortunately for you, @FriendName appears to be running a little late, and doesn’t respond to your calls as immediately as you would hope. It’s cold outside, damn it, and for all your brazenness, your choice of clothing isn’t necessarily the best in the cool air of the morning. Boldness is your modus operandi, yet in this particular instance your feel a slight tinge of regret. Regardless of how you might be feeling, though, your train of thought is interrupted by @FriendName barging through the door like a bat out of hell, slamming into you before—understandably—recoiling in horror.
+
+“Are...are you naked? @PlayerName? What...what part of this seemed like a good idea to you?” Haters. Even your friends are against you! 
+
+“Never you mind @FriendName, never...you...mind...let's go!” Your message doesn’t seem to have eased his mind, unfortunately.
+
+Shushing @FriendName, you motion for him to follow along. A few doors down, you notice @EnemyName stepping down from your her as well. “But...what...like, why?”
+
+>Greet @EnemyName, Run With @FriendName to the Bus, Go Home And Change
+1
+
+39
+#
+A Hero Seeks Assistance
+Pushing open the glass door, you and @FriendName step into the air conditioned office. At the desk, a stern-faced lady stares back at you—Ms. Kean, as her nameplate displays—rifling through a stack of papers. You don’t seem to have been the first to enter the office this morning, judging by his disinterested expression. In fact, you bet she’ll probably know exactly why you’re here. No offense to Ms. Kean, but she doesn’t exactly seem the type to visit on a lark.
+
+“...last name, grade.” She says nothing more, waiting expectantly for a response. Clearly, this isn’t her first rodeo.
+
+“Who, uh, me?” She glares back at you. Right. Who else. “Uh...my name’s @PlayerName @PlayerLastName, 9th. Um...yeah. And @FriendName?”
+
+Raising an eyebrow at you, @FriendName says, “Yeah, I’m @FriendName @FriendLastName, also 9th. Nice to meet you.” Suck up. He flashes a huge smile to Ms. Kean, though she simply glares back. Really not much for smiling, it seems.
+
+“@PlayerLastName...locker #@PlayerLockerNumber. @FriendLastName…locker #@FriendLockerNumber. Here are your schedules, don’t lose them, you won’t get another one.” Sighing (for what must’ve been the fifth time), she hands over two schedules. Then, as an afterthought: “...have...a good day.” 
+
+In unison, the two of you thank her, and back out of the office. Glancing down at your schedule, you can see that you have 
+
+
+
+> X
+2
+ 
+
+0
+$
+Quit
+X
+>X
+0
+
+
+1
+$
+Welcome to the Void
+You wake up in a black void. An eerie silence hangs in the air, little visible save for an almost unnoticeable source of light to the west. To the north, south, and east, not much can be seen, though stumbling off in the darkness is a viable possibility nonetheless.
+
+What will you do?
+>Go North, Go South, Go East, Go West, Do Nothing
+4, 0, 0, 0, 0
+
+
+
+2
+$
+West (1)
+Heading towards the light source, you feel a worn cobblestone path beneath your feet. Thinking it a sign of good luck, you quicken your pace, nearly falling over yourself in your haste to be rid of the darkness. As you near the source of light, your eyes make out the outline of a stone wall in front of you, blocking off your path. The light appears to be emanating from a hole in the wall, and you can hear noises coming from inside. What will you do?
+>A
+1
+
+3
+$
+West (1), Turn Around
+Weighing your current options, you decide it would be best to leave whatever is causing the light alone, and pursue other options instead. So, turning back to the east, you head back to where you started. You can continue east, south, or north (none of which are lit, at least at first glance), or change your mind and head back west. What will you do?
+> A
+1
+
+4
+$
+West, Enter Cave
+Entering the cave, you see three hooded figures sitting around a campfire. Evidently, this was the source of the light. The tallest of the three looks up from the flames, before barking at the other two in a language you can't understand. The three stand in unison, grabbing what appears to be a stone-tipped spear from the back of their robes. Grunting, they advance towards you at a frightening rate, the heads of their spears getting closer and closer by the second. On the ground near your foot you spot a few jagged rocks, but no other form of weaponry is in sight. What will you do?
+> A
+1
+
+5
+$
+West, Enter Cave, Run Past Figures
+Fearing for your life, you make a mad dash past the three figures, choosing the rash decision to descend deeper into the cave. Startled by your sudden movements, the nearest one jabs his spear into your side, causing you to cry out in pain. And, from the looks in the other two's eyes, it doesn't seem like their thoughts are very far from their comrade's. So, ignoring the throbbing pain and outpouring of blood, you sprint as well as you can manage down into the depths of the cave, praying for safety. Instead of safety, it seems that the only thing in the depths at the present time is...more hooded people. Rats. Their conversation dies down instantly as they all whip around to glare at you. Double rats. For a few seconds, nobody moves, the air frozen in anticipation. Then, the hooded figures take note of your wounded side, and grab their own respective spears. Why does everybody in this stupid cave have to have spears? Sighing, you try and think up a plan as quickly as you can. 
+
+Indeed, it seems like your friends from earlier caught wind of this, as they approach behind you, eager to help your brainstorming process. Triple. Rats. What will you do?
+> A
+1
+
+6
+$
+West, Enter Cave, Yell
+Trying to figure out a way to communicate, you yell “stop,” but they don't seem to understand. That, or "stop" to them means "go twice as fast," which is what they decide to do. The pointy end nearing, you wave your hands in the air, though that too appeared to have no affect on the men. Out of options, you close your eyes and put a hand out in front of you—if that doesn't work, nothing else will. Resigning yourself to your fate, you close your eyes and wait...yet, nothing happens. Worried that you've just gone numb from the excruciating pain, you open one eye, only to see the men crouching with their spears on the ground in front of them. They...stopped? Apparently your communication tactic worked. They seem fairly docile now, and two already moved back to the campfire.                      
+
+What will you do?
+>A
+1
+
+7
+$
+West, Enter Cave, Run Away
+Valuing your life over your curiosity, you hightail it out of there, not even stopping to glance back at the figures. Though you can't hear any sounds of pursuit, you continue to run as fast as your little legs can carry you, panting all the while—you're not exactly the picture of fitness, unfortunately. Short of breath, you collapse, a safe-feeling distance away from the entrance of the gave. Coincidentally, you happen to be incredibly close to where you initially started, making things very easy in terms of reorienting yourself. You can choose to go back into the cave (though the figures still inhabit it), or head out into the darkness of the south, east, and north. Either way, you need a moment to catch your breath. 
+
+What will you do?
+>A
+1
+
+
+8
+$
+West, Enter Cave, Do Nothing
+As you watch the men near you, you decide to do what you do best: nothing. Your eyes glaze over, and you stare blankly back at them as their spears inch closer to you. The two glance at one another, before continuing towards you. And yet, even as they are less than an arm's length away, you still remain nonchalant, doing absolutely nothing. Impressed by your lack of fear, the men nod their heads at you, dropping their weapons and returning to sit back at the fire. When your mother said that you were good for nothing as a kid, THAT must've been what she'd meant. You'd always thought your dad had been a disappointment from the way she'd said it about him, but she probably just meant that he was a master of solving problems. 
+
+What will you do?
+>A
+1
+
+
+$
+Communicate?
+Feeling that you still need to communicate with the men, you wave your hands around furiously, hoping they'll reciprocate. Instead, they remain transfixed on the flames in front of them, ignoring your pointless hand waving. Sighing, you relent, moving to sit down next to them to warm yourself at the fire. Neither seems to object to your presence (contrary to what their spear-wielding may have suggested), so you settle down in front of the heat, feeling the warmth return to your fingertips. You hear odd noises coming from deeper in the caves, but neither of the two seem perturbed in the least by the sounds. Against your better judgement, you force your ears to close themselves off to the sounds, instead focusing solely on the crackling of the hearth in front of you.
+
+What will you do?
+>A
+1
+
+9
+$
+West, Enter Cave, Hurl Rocks
+Bending down, you grab as many rocks as you can, hurling them at the approaching figures. Unfortunately, rather than slowing down, they speed up their approach, clearly angered by being hurled rocks at. A stone connects with the nearest one's head, causing him to stumble backwards, but the other two are nearly an arm's length away.Picking up another stone is futile, and one of the figures thrusts outwards with the spear, jabbing you in the side. Immediately, searing pain travels throughout your body, and your vision clouds. Blood begins gushing out of the wound, and you have to clench your fists to stop from passing out. Even still, you fall over backwards, out cold. The men put down their spears, lifting you try to moving your body over to the fireplace. Attempting to cauterize the wound, one of the figures thrusts their spear into the flames, holding the stone to the wound. The other grabs a length of cloth, tightly wrapping the wound to stop the blood flow. Who are these men? Why are they here? What do they want? What will you do?
+
+(Hint: Nothing, you're passed out)
+>Nothing
+10
+
+10
+$
+West, Enter Cave, Hurl Rocks, Be Passed Out
+Zzzz, zzz zzzzzz zz z. Zzz, zz! Zzzz, zz? Z, zzz, zzzzzzz...zzz...z. Zzz. Z. Z? Z! Zzzzzzzz...Zzz...zzzzzzzzzzzz...! Z. Z. Zzzzz...! Zzz zzzz z z zz zzzz zzzz zzz.
+>Continue Being Passed Out
+11
+
+11
+$
+West, Enter Cave, Hurl Rocks, Be Passed Out, Continue Being Passed Out
+Zzz?
+>Be The Awake
+12
+
+12
+$
+West, Enter Cave, Hurl Rocks, Be Passed Out, Continue Being Passed Out, Be The Awake
+Finally coming to, you groan, your side aching in pain. It feels—fittingly so—like you've just been stabbed. Your head feels woozy from blood loss, and the your vision seems to be cloudy. The three figures from earlier sit are nowhere to be found, though the campfire they previously sat around remains burning brightly. You aren't bleeding, though moving may cause the wound to reopen. Continuing west will take you deeper into the cave, and your hear sounds belonging to unknown voices within. However, leaving the cave is a still a viable option, or you could simply choose to do nothing. Having been passed out only moments prior, you have no idea where the hooded figures went nor when they will return, but you have a sneaking suspicion it may have something to do with the noises from deeper in the cave.
+
+What will you do?
+>A
+1
+
+
+13
+$
+West, Enter Cave, Hurl Rocks, Be Passed Out, Continue Being Passed Out, Be The Awake, Descend Cave
+Clenching your teeth, you manage to stagger to your feet. Your breaths are shallow, and your side protests your sudden choice to stand, but you manage to muster the strength to make your way deeper into the caves. Almost drunkenly, you leave the warmth of the campfire, shivering at the sudden loss of heat. The cavern feels cold, unnaturally so—even barring the distance from the fire, something about the caves themselves feels...off. The cave spirals downwards in a staircase-esque fashion, and strange, rhythmic noises—almost chant-like—emanate from the depths below. The hooded figures from earlier seemed fairly hostile, having stabbed you with their spears, and if the brief interaction you had with them earlier was any indication, a dark cavern full of them might be more of a curse than a blessing.
+
+What will you do?
+>A
+1
+
+14
+$
+West, Enter Cave, Hurl Rocks, Be Passed Out, Continue Being Passed Out, Be The Awake, Descend Cave, See The Thing
+The narrow passageway opens into a wide cavern, lit with a strange blue glow. As you suspected, the chanting was from the hooded figures from before, though there are far more than you had initially anticipated. Rather than the three you saw earlier (lookouts, presumably), twelve identically-dressed figures stand in a circle, chanting in a strangely foreign language. Disconcertingly, their eyes seem to be glowing—the source of the blue light—and a wispy material is rising from each of their throats, congealing to form a constantly-morphing blob in the center of the room. Watching the figure...grow into existence fills you with a sense of dread, and you watch in horror as the mass begins to morph into a warped, human-like figure. The chanting subsides, instead replaced by a low-pitched moaning sound as the ethereal substance continues to rise off the figures in the circle. You stare dumbfounded, frozen in shock.
+
+What will you do?
+>A
+1
+
+15
+$
+[...] See The Thing, Snap Out of Panic
+You snap out of your panic, just in time to realize that you need to stop whatever is happening. Gathering up all the courage you can muster, you wrap your arms around the nearest chanter, yanking him out of the circle. Instantly, his eyes stop glowing, and he falls limp into your arms. The other members still continue chanting, unaware of anything around them. As you move to pull another from the circle, they all suddenly snap upright, the blue fading from their eyes. In unison, they all fall over backwards, collapsing. Though the chanting has subsided, the damage seems to have already been done, and the blue figure suddenly stops moving. Then, deliberately, it stretches to form legs, then arms, then a humanoid face. As you watch it, it transforms from a blob to a near-perfect representation of a human being right before your eyes. Finally, as if by magic, a shark-toothed grin stretches across its "face," as it cocks its head to face you. You open your mouth to panic, but your voice catches in your throat, unable to make a noise. Testing out its newfound form, the blob-turned-human tentatively takes a step towards you, then another, grinning all the while.
+
+What will you do?
+>A
+1
+
+16
+$
+Run.
+Gritting your teeth, you do a 180 and run as fast as your little legs can carry you. Something about Blue doesn't exactly give you a vibe of friendship, so you hop to it, running back north as quickly as possible. As quick as you were, you still hear the sound of Blue running up behind you. Well, you would if his legs made sound. Without a second thought, you run out of the cave, past the now-extinguished fire, and continue to the north back to where you intially started. As close as you can figure, at least—it is still dark out, after all. Your rapid scurrying didn't seem to stop Blue's progress, unfortunately, and the constant blue light it emitted was still visible, as far away as you were (or felt you were, really—Blue could move really fast). Taking a moment to reorient yourself, you use the light to look around. To the north you can now see what seems to be a cliff (which would be quite useful to you if you had a parachute, but alas, you do not), to the east seems to be a village or something, and to the south...you can see nothing in particular. Aware of Blue's proximity to you, you try and make up your mind as quickly as possible.
+
+What will you do?
+>A
+1
+
+17
+$
+Run...The Other Direction?
+Though your gut tells you it's a bad idea, you turn around and run back towards the cave. You tend to make a habit out of trusting your gut, but in this particular situation you believe it to be wrong. So, rushing back as quickly as you can, you manage to stop before colliding face-first with Blue, the very reason you ran from the caves in the first place. Nervously, you take a step backwards—you never should've doubted yourself. Sadly, it's late to turn back, and you regret your mistakes immediately. Blue, understanding, reaches out to give you a reassuring pat on the forehead. That, and absorb your life-force, as everything suddenly goes black.
+
+You died. Restart?
+>A
+1
+
+18
+$
+Actually Realize You Love The Thing
+As you watch Blue move towards you, you slowly come to terms with the fact that you can't fight back against it. Instead, you drop to the ground and shut your eyes, making like a possum. That'll fool Blue—how much brain power can a blob (albeit a human-shaped one) really have? Committing to your disguise, you splay out on the stone, pretending to be one of the discarded cultists. Your left eye stays slightly ajar, observing the movements of Blue, though he seems more preoccupied with the cultists then with your sudden, violent "death." Perhaps he'll forget about you? From the corner of your eye, you see the cultists slowly begin to disintegrate. Almost like a horror movie, the skin begins to peel off the bodies, then muscles, until all that's left is a pile of dust. Unable to help yourself, you vomit on the the ground, the sudden noise causing Blue's head to whip around (well, his facial features to shift to the other side of the head-shaped blob), looking down at you. While your initial plan wasn't exactly winning any awards, it was at least better than having the entirety of Blue's focus fixed on you. As you watch, you feel a rawness all over your body, doubly so from the wound in your side. Then, a searing pain, followed by blackness.
+
+You died. Restart?
+>A
+1
+
+19
+$
+Light That Mofo Up!
+Glancing around for anything you can use to your advantage, you notice a torch on next to one of the cultists. Blue is currently cutting off your path, but you choose to duck, sliding towards the thankfully still-lit torch. Blue casually turns his head around to face you—the perks of being an anthropomorphic gelatinous blob. Even still, you hold the torch out in front of you. Uncaring, Blue takes a step forwards, reaching out to touch your forehead. Instinctively, you hold the torch above you, praying it'll do...something. The instant its hand comes into contact with the flames, it recoils, emitting a shrill, high-pitched scream. Apparently, the fire did some damage to it...who knew? The grin disappeared from Blue's face, and it reaches out again, this time intending to grab the torch. However, as your only weapon (and one that does damage to Blue to boot), you thrust it out, catching Blue in the stomach-area. Screaming even louder, it stumbles back, the fire igniting its entire body. In the blink of an eye, Blue is gone, leaving a only a small blob of blue residue behind. With Blue gone, the rest of the cave is now open to explore, and there is a path leading further down that you failed to take note of earlier.
+
+What will you do?
+>A
+1
+
+20
+$
+Grab Spear
+Springing to action immediately, you grab a spear from one of the chanters. The blue form pauses for a minute, seeming to ponder your choice, then—if possible—grins ever wider. Seizing your opportunity to deal some damage, you jab the spear into the thing. It recoils back, wounded...or, so it seems. In reality, the thing hardly even felt the spear, and rips it out as easily as it went in. Its grin changes to a tight-lipped smile, and it hurls the spear back at you at nearly twice the speed you were able to throw it. You nearly dodge to the side, feeling the force of the sudden swivel in your still-bleeding wound. As severe as it may feel, with Blue right ahead of you, it's the least of your concerns at the present time. Grin returning, Blue lurches forwards, standing no more than two inches in front of you. Seeing how easily it disposed of the chanters and spear, you hesitate to think what it could do to you as easily as taking a breath.                      What will you do?
+>A
+1
+
+21
+$
+Actually Realize You Love The Thing
+With Blue no more than a few inches away, you feel something in your chest. Fear? No...something...different. Butterflies in your stomach—an urge to run away? No! It's something...something you can't quite explain. Something about this morphing blue blob just...you aren't sure what it is. But as you stare deeper into Blue's eyes (or, rather, where Blue's eyes would be if it had eyes), you realize what it really is that you want: you want to kiss Blue. Yes, the signs were so clear all along—your attempt to sabotage the summoning was deliberately a failure, your spear throwing an attempt to play hard to get. Now, in this moment, you have the opportunity to get what you've always wanted. You lean forward, lips puckered, and plant them on the only facial feature Blue actually has. Your kiss is long and passionate, and you hardly even feel your life-force draining away as passion overcomes your body. Well, passion and a sudden lack of existence as everything goes black.
+
+You died. Restart?
+>A
+1
+
+22
+$
+See The Thing, Do Nothing
+Frozen in horror, you watch as the blue abomination nears you, each moment bringing it closer and closer until you can almost reach out and touch it. A shrill, high-pitched laugh emanates from its head (or as close to what can be called one), and it waves its arms around, raising the bodies of the fainted figures off the ground. It curls its fingers, and the bodies contort and twist. Gruesomely, the skin begins to peel off the bodies, and the figure cackles, absorbing their blood and closing its fists. An eternity passes, and all that remains is dust. Then, the beast ever-so-slightly turns its head back to you, toothy grin still plastered onto what you hesitate to call a face. You cower away from the gaze, but it feels like the being is boring a hole into your soul nonetheless. Stealing a glance at it, you watch, paralyzed as it uncurls a finger, tapping it to your chest.
+
+And then everything goes black.
+
+You died. Restart?
+>A
+1
+
+23
+$
+Go East
+Ignoring the light source to the west, you instead stumble off blindly to the east. Unable to see a thing, you put your hands up for security—this proves to be a wise decision, saving your face from bashing into a tree. Thanks, hands! You feel your eyes beginning to adjust to the darkness, just in time to make out the figure of a four-legged creature ahead of you. False alarm, just a rock. Lucky break!
+
+…can…rocks bite? Best not find out.
+>A
+1
+
+24
+$
+Get Bit
+Though the rock seems plain at first glance, you can't help but feel suspicious of this gigantic piece of stone. Curious, you look around the rock, trying to make a note of anything out of the ordinary. The rock is...perfect. Imperfectly so, in a way that it should be impossible for a rock to be. Intrigued, you reach out to stroke the rock...and immediately recoil, your hand bleeding. The rock bars its apparent teeth at you, then lifts itself off the ground—God knows how—and scurries away. Turns out, rocks (or, at least, the creature mimicking the appearance and behaviors of one) CAN bite. You'll have to keep your distance from things in the future; nothing in this void is what it seems.
+>A
+1
+
+25
+$
+Abandon Your Bulwark
+Leaving your granite friend behind, you continue to the east. You know what they say, east is the least...dangerous path. Yes, that age-old saying, one of your favorites. Unfortunately, the least dangerous path seems to be the least interesting as well, and nothing appears to be happening for the time being.
+
+What will you do?
+>A
+1
+
+26
+$
+Continue East
+You feel your eyes beginning to droop, but you shake your head and keeping walking. The further east you walk, the more lost you begin to feel. A bat swoops overhead, startling you, but nothing else of interest seems to be going on. What little you can make out of your surroundings doesn't pain a very vivid picture of the landscape—the outline of trees, some pebbles here and there, and some rope laid out in a suspiciously trap-like manner. 
+
+...wait, what?!
+>A
+1
+
+27
+$
+Tug The Rope  
+Curious, you tug on the end of the rope, and instantly the rope flies up into a sack. Unfortunately, seeing as you were standing directly on top of the previously obscured rope sack, this means that you also fly up into the air, contained in the sphere. This is a bummer. And, as if on-cue, a light immediately shines on the horizon, nearing you. Whoever set the trap wasn't too far after all, and they might not be too pleased with their prey. Unless...you were the intended target after all. Whatever the purpose of the traps, the source of the light is getting closer every moment, and there looks to be more than one. Plus, they're coming straight from the direction you were headed. This definitely feels like bad news to you.
+
+What will you do?
+>A
+1
+
+28
+$
+Don’t Play With Suspicious Ropes?
+Choosing the wisest option for your safety, you decide to give the rope trap a wide berth, continuing on in the direction you intended. The kind of people who set traps in the dark don't seem like the kind of people you want to associate with in your current defenseless state. So, quiet as a whisper, you tread east, hoping to find some way of understanding where you are and what you're meant to be doing. Much to your dismay, the trees don't seem to have mouths, and if they do, they seem to be quite tight-lipped about your current situation. Mentally cursing them out as loudly as you can, you wave your fists angrily in their general direction. Damn trees. You almost fail to notice another rope trap to your right in your anger at the trees, though luckily, you managed to take note of it before triggering it, and are able to walk off unscathed. Betrayed, you glare at the trees. This was probably their doing.
+
+What will you do?
+>A
+1
+
+29
+$
+Cast Ropes From Your Mind
+Not concerned by the first nor the second rope trap, you continue east; no pesky traps will stop you from getting to where you want to go. You spot multiple more rope traps around your path, but ignore them completely. Even still, giving them as little thought as you are attempting to do, it's hard not to notice their increasing frequency. Along with the sudden rise in rope traps, there seems to be a noticeable rise in light level. And, since it doesn't seem to be sunlight (if there even is sunlight wherever you are), the light has to be coming from somebody...or, well, something. Unsure of whether or not this equates news or bad news, you continue walking, hoping more-so for the former than the latter. However, due to your emphatic trap-ignoring mindset, the rope in the middle of your pathway goes unnoticed until you step right into the middle of it, sweeping you up into a net. Damn it. You hear yelling in the distance, and the source of light seems to be nearing you.
+
+What will you do?
+>A
+1
+
+30
+$
+Struggle.
+Struggling in the rope trap is getting you nowhere, and the pitter-patter of approaching footsteps has nearly reached a deafening volume. With no form of escape from the net besides cutting yourself out, your options seem rather slim for the time being. And, seeing as the gaps in the net aren't large enough for you to attempt to squeeze through, you're probably going to be making some friends fairly soon. With the uncanny ability things have to appear right after you think of them, the oncoming stampede arrives, brandishing torches and what appears to be...bows? Whatever they are, they certainly don't look pleasant. The nearest one—their chief, from the looks of things—points at you and yells up at you in a hard to understand accent, though is speaking English nonetheless.   
+
+"Who...are you? Why have you come to our lands?" You stare back bewildered, though grateful for some human interaction. Gesturing to two men in the back, the leader steps forward, cutting you down from the net. "Come," he says, nodding.
+
+What will you do?
+>A
+1
+
+31
+$
+Follow The Men
+Ignoring the fact that the men were the reason you were caught in a trap in the first place, you jog after them, quickly closing the distance. The apparent chief turns his head around, acknowledging your presence, then shifts to look ahead—judging by the speed at which they reached you, it doesn't seem too far-fetched to assumed that the people live nearby. However, it may have simply been your mind playing tricks on you out of fear, as you seem to be a ways away. None of the men walk next to you, instead choosing to walk in an organized march, side-by-side in rows of three. None of the men seem to pass in front of the head of the pack, the chief—and, judging by the overall silence and unquestioning of his commands, he seems to be the leader of this group of people. After a few more minutes, you notice the tip of a hut on the horizon, then another, then another. Your eyes strain from the sudden light (strangely masked before), but you're thankful to be rid of the darkness nonetheless. As the men pour into the makeshift village, they disperse, breaking the army-like marching rows. The chief himself stays behind, beckoning to you as he steps into a large in front of you, by far the largest of the bunch.
+
+What will you do?
+>A
+1
+
+32
+$
+Ignore Chief
+While you respect the chief (or, at least, acknowledge the slight authority he has over you) of this village, you decide that his beckoning of you was more of a suggestion than an order—he'll have to wait until you're done. And, in order to enjoy your newfound sense of freedom, you choose to explore the area around you rather than enter the stuffy confines of the nearest hut. Though you glanced around when you arrived, a quick look was nowhere near enough to really take in your surroundings. They don't exactly scream "interesting," though. Besides the hut you were motioned into, a number of other squat buildings sit scattered around, as well as a great deal of open space; the village doesn't really have too much going on. The buildings look like they stop after a certain point, and while everything is fenced in, the path continues onwards to the east.
+
+What will you do?
+>
+
+33
+$
+Step Inside Hut
+Not wanting to keep the man waiting, you hastily step into his hut (more of a teepee, really). Inside, torches adorn the walls, and what seems to be a line of skulls sits in the corner—how they got there, you don't feel like asking. Gesturing to a spot on the ground, the man nods his head at you. Then, in a raspy voice, he says, "Sit." Not wanting to offend, you sit down, eager to milk him for information. As the only person you've met thus far, you don't exactly want to get on his bad side. The man seems fairly quiet, though, preferring to communicate through actions rather than words. Grabbing a mug of sorts, he hands you a cup of warm tea—at least, you hope its tea. He nods, taking a sip from a mug of his own. You sit in silence, sipping the drinks, neither of you saying a word to one another. Barring the traps that got you into this situation in the first place (and, well, the seemingly very human line of skulls), the man seems very docile. The room itself is devoid of weaponry, and judging by the way you've been treated so far, it doesn't seem like the man perceives you as a threat. Even still, being cautiously wary might be a good idea.
+
+What will you do?
+>A
+1
+
+$
+Listen To Chief
+An awkward silence fills the air, and neither you nor the chief say a word to one another. Instead, you both sit facing one another, the room curiously devoid of noise. If there were crickets, they'd be chirping loudly. Actually, there are crickets, and they are chirping. Go figure. So, the room is devoid of noise, sans the noise of the crickets.
+
+After what seems like an eternity of nothing but cricket chirps, the chief clears his throat, and begins to speak. 
+
+“I…I am Hwon-Hgar. You are a guest in our lands, but you are not from this place. You do not understand. How have you gotten here?" Unfortunately, it seems that the man knows about as much about you as you do. You're not quite sure what you expected, but answers seemed like a reasonable request. Sadly, this doesn't seem to be the case. Sighing, you manage to say, "I...don't know." The man nods solemnly, a look of understanding on his face—perhaps he knows more than he's letting on.
+
+What will you do?
+>A
+1
+
+34
+$
+Actually Be An Idiot
+Pondering the idea of entering the chief's hut, you take a step forward, then pause. Do you...do you really want to enter the chief's hut right now? Moreover, do you really want to do anything right now? And then it hits you: what you want to do is flail aimlessly. Yes, the thought has stuck a cord with you, and you make yourself go limp, throwing your arms out every which way. The few passersby gaze at you shifty, questioning your choice of actions. But you pay them no mind, flailing freely. You kick legs out from under you, hitting your head on the pavement. In your seizing state, you somehow (in a miraculous feat of special snowflakery) manage to snap your neck, the life fading from your eyes. The chief peeks out of hut, looking down at you condescendingly and shaking his head. He steps forward, scooping you up in his arms, then bringing you into his hut.
+
+Rest in peace, idiot.
+
+You have died. Restart?
+>A
+1
+
+35
+$
+North
+Making the choice to go north, you go on a walk of faith in the darkness, trusting your instincts not to lead you           astray. Hopefully, the north will remember that you've chosen it as your path over all the others—apparently, it has a fairly solid memory. Unlike the other paths, the northern one seems to feel more...open, in a sense, almost as if you're nearing a clearing. The silence seems even quieter, in a way, ominously building up to something. But what could be in this "clearing"? Continuing onwards, you proceed with a greater sense of caution, wary of anything that could happen in the open space.                      But enough about that—driving any worried thoughts from your mind, you pause, catching your breath.
+
+What will you do?
+>A
+1
+ 
+36
+$
+North (2)
+This already boring-seeming path seems increasingly less interesting the more you walk. Fears of predators are quickly replaced by the unrelenting pain of pure boredom, even in this unknown world. If a deity was in charge of creating the paths you walk along, he seriously decided to make this one as boring as possible. You contemplate a nap, but decide against it—that'll be reserved for when you can take the boredom no longer...AWAKE! You're awake, you didn't even come CLOSE to thinking of falling asleep. Instead, you fill your mind with thoughts of adventure. This certainly feels adventure-y, doesn't it? Well, maybe a part of the adventure that would be cut out of the story books, but what can you do? Sighing, you step over a rock in the path (sadly, the most interesting part thus far), and...                      
+
+...plummet? Yes, in your boredom-ridden state, you failed to notice the literal cliff you just stepped off of, plummeting straight to your death, thousands of feet below. Rest in pieces.
+
+You have died. Restart?
+>Restart
+0
+
+37
+$
+South
+Deciding to choose one of the non-lit options, you turn and head south, hoping that won’t be the direction things turn. Though difficult to orient yourself, you make your best effort to head in a straight line such that if things do not smoothly, you can always turn back around. Unfortunately, having chosen to go south instead of west, the source of minimal light fades away until it is little but a speck in the distance. If only you had a flashlight, this expedition to the south would be made a whole lot easier. But alas, you do not, and the journey will remain shrouded in darkness. What a shame. Really, a flashlight would make the journey a LOT easier. But enough about the flashlight that unfortunately you do not have at this moment in time. Your woes put on a back-burner, you pause at what seems as good a place as any to do so. If only you had a flashlight…
+
+What will you do?"
+>Continue South, Look Around
+1, 2
+
+38
+$
+South, Look Around
+Taking a moment to acquaint yourself with your surroundings, you pause and squint your eyes. The darkness has quickly turned annoying, as anyone would agree. What little you can see is hard to make out, your path harder still. However, you can just barely see hills on the horizon, sloping upwards in contrast to the mostly flat terrain you've covered thus far—though, without any real light, there could easily be mountains all around you. The light you saw earlier was back to the west (east from your current point of view), but it has long since disappeared from view. You can't make out anything else, as it all seems to be blocked by tall, comically leafy trees. A flashlight would really go a long way. And just like that, you feel your foot kick up against something. Could it be...? Nope, just a rock. But wait, what's that in front of the rock? Aha! Reaching out, you feel your hand close around what appears to be a fully functioning flashlight. With working batteries. In the middle of pitch-black nowhere. Hey, best not question it.  
+
+You got: A Flashlight! Your field of vision is now far greater. 
+
+What will you do?
+>A
+1
+
+39
+$
+Possess Flashlight, Do Nothing
+Armed with a flashlight, you decide...to do nothing. Your flashlight bathes the world around you in luminescence, and with this newfound vision, you...decide to do absolutely nothing. Instead, you choose to waste your battery life, dawdling in what you now correctly know to be a tree-filled area. Yet, not even stopping to ponder what this means for the future of your journey, you decide to literally do nothing and wait for inspiration to strike. No—since thinking would mean doing something, you stare blankly ahead. No, you do it with your eyes closed, as staring ahead would mean you were doing something. Instead, you completely and utterly waste your time doing nothing. 
+
+What will you do?
+>A
+1
+
+
+40
+$
+Continue South, Sans Flashlight
+Sighing, you trudge onwards, still hung up on your utter lack of a light source. Perhaps somebody left one behind earlier and you missed one entirely, too stubborn to look around. That would be a real shame, all things considered. If you would just turn around, maybe you could scour the area for firewood, or some flint and steel, or who knows, perhaps a flashlight left in the middle of the path in plain sight even. But alas, that would be foolish—clearly, you would find nothing. Your stomach grumbles, and you begin to realize that you haven't eaten in what feels like days. Hopefully you find something to eat soon, or you may actually starve to death.
+
+To your left (east), you notice a dip in the trees, the flora seeming to thin to make way for something. Curious, you glance over, and notice that there seems to be a hole in the ground, unmarked and inconspicuous. But what could be in the hole?
+>A
+1
+
+41
+$
+Hole-d On While I Investigate This Hole!
+Meandering off of the southern path to investigate the hole, you choose to head east rather than continue in the direction you were previously headed. Thus far, you've felt a sort of path underneath your feet, but the east path feels unexplored, giving the hole you're headed a sort of mysterious quality. Off the beaten path indeed...perhaps not what you want to be exploring unarmed and unprepared. A dimly lit, incredibly narrow passageway descends down from the top of the hole, and you have to suck in to fit. However, save for the rustling of leaves on the surface, not a noise can be heard from below, nor above, really. Much to your dismay, you're heading down into what appears to be a dungeon, no idea of what lurks underneath.
+
+What will you do?
+>A
+1
+
+42
+$
+Descend.
+Reaching the bottom of your descent, you are faced with a number of options for directions to head in. Unlike the surface above, the dungeon has flickering torches on the walls, illuminating the place enough to see the paths ahead. Heading to the east (straight ahead) would take you down an unlit path (in stark contrast to the rest of the dungeon, which has torches lining the walls), while the southern hallway seems to open into another room. Heading west will take you down a far mossier hallway, and though you're underground, you swear you can make out a tree.
+
+What will you do?
+>A
+1
+
+43
+$
+Go West of Dungeon
+Heading to the west of the dungeon, you notice a great deal of greenery on the walls. This path seems...damper, almost like a source of moisture is nearby. At any rate, this wing seems home to a great deal of greenery, and continuing to walk brings you to a room filled with plants. In the center in the room on a bed of grass sits two similarly-shaped mushrooms. The one on the right is blue, and the one on the right is red. Save for their strange coloration, neither mushrooms seems very unique, both being small and fairly inconspicuous. However, you have a strange desire to eat one. The path ahead is blocked, unfortunately, and your entire attention is focused on the mushrooms, with no thoughts of doing anything else (much less turning around or not eating a mushroom).                      
+What will you do?
+>Eat The Red Shroom, Eat The Blue Shroom
+1, 2
+
+44
+$
+Eat The Red Shroom
+You feel...weird...
+>A
+1
+
+45
+$
+Eat The Blue Shroom
+You feel...odd...
+>A
+1
+
+46
+$
+Stop Tripping Balls
+That was a very peculiar experience. Luckily, the path behind you was never actually blocked off at all, and you're free to turn around if you so desire. Or, you could choose to eat the other mushroom, as it still sits on the ground, untouched.
+
+What will you do?
+>Leave, Eat The Other Shroom
+1, 2
+
+
+47
+$
+Eat The Other Shroom
+What, this again?
+>Seize The Hallucinations
+1
+
+48
+$
+Seize
+Okay, you feel like you've tripped enough for one lifetime. Better make sure to tie your shoes in the future. You feel a little fuzzy, but there are certifiably no mushrooms left to consume, and the path back is still wide open.
+
+What will you do?
+>Actually Consume More Mushrooms Somehow
+1
+
+49
+$
+You Have a Problem
+You have a serious problem.
+> Stop. Tripping.
+1
+
+50
+$
+X
+It's time to stop with the drugs. Anything else could kill you. Please, just turn around and go somewhere else in the dungeon—surely, something here is more interesting than wrongly abusing hallucinogenics.
+
+What will you do?
+>Refuse Not To Trip
+2
+
+
+$
+Overdose
+With your magic abilities to somehow attract mushrooms to your person, you find just one more. Telling yourself that it's not biggie, you take another, and immediately start to feel weird. Not "trip" weird, bad weird. And not in a bad trip sort of way either. You suddenly find it hard to breathe, and are gasping for breath. Have...have you overdosed on shrooms? As your head begins to spin, you claw at your throat, wondering what prompted you to be as stupid as you were.                                 
+
+Stay smart. Don't start. Rest in peace.
+
+You died. Restart?
+>Restart, Quit
+1, 0
+
+
+
+$
+Ignore Hole
+Deciding that your relative safety is more valuable than investigating some unknown hole, you continue without checking it out. Instead, you continue south, sure that your legs will lead you in the right direction. Your eyes have mostly adapted to the darkness, though your vision is still very limited—so much so that your eyes nearly pass over a note in the middle of the path entirely. Hearing the sound of paper beneath your feet, however, you do a double take. There, clear as daylight beneath your foot (if crumbled a little bit from the impact) is a plain white note, scrawled on in near-illegible handwriting. Red splotches adorn the page, splattered here and there, seemingly at random. Is that...blood? Shivering, you attempt to read the note, but are unable to; while your eyes have adjusted to the darkness, it's still not enough for you to make out the wording on the letter. Sighing, you pocket the note, your desire to find a light source rekindled.                      
+
+What will you do?
+> Continue South
+1
+
+$
+Continue South
+Continuing forwards, note in hand, you feel a sense of dread. The note itself not withstanding, something about the path you're walking along seems...creepy. You feel your foot brush up against something, and kick it, hearing a crack as the object—whatever it was—goes sailing through the air. However, its not long before you feel something else, which you bend over to inspect. It feels rounded, almost egg-like on the back, though it dips forwards. You feel two holes in the front, and the shape plateaus downwards, though the texture is anything but smooth. Taking a closer look at it, you realize that what you're holding is anything but inconspicuous: in your hands, clear as day, you're holding a human skull. Fighting back a scream, you throw the skull as hard as you can manage, hearing a cracking noise as it reaches the ground in the distance. Shuddering, you and make sense of the fact that you've just found a skull (and, that there are seemingly many more).
+
+What will you do?
+> Number
+0
+
+$
+Do Nothing
+You...did nothing. You remain standing in the blackness, and nothing has happened. Boredom threatens to overwhelm you.
+>A
+5
+
+$
+Continue To Do Nothing
+Suddenly, out of nowhere...nothing happens. You continue to do nothing, not even twiddling your thumbs. Never in your life have you felt more lethargic.
+>Fuck
+2
+
+$
+Literally Die Of Boredom
+Suddenly, you fall over backwards, unable to lift your head off the ground. You have literally died of boredom.
+>Intercourse
+2
+
+$
+Become The Zombie
+In a way that feels neither tacked on nor forced, you feel something bubbling inside you. Though you've only just become aware of your very self in this place, you feel...well, if you knew how you normally felt, you'd know that this was certainly out of the ordinary. Suddenly, you freeze, unable to move (though you weren't moving in the first place), your back arching. A searing pain travels through you, and you feel unable to control your body. Then, as quickly as it came, the pain was gone, your mind filled with thoughts of...brains? All you can seem to think is brains, how delicious they are, how much you crave them. Your cognitive abilities seem to be fading away with every moment, and you almost feel like you're in a trance.
+
+Then, everything goes black. In your place, acting as what once was not-zombie, is a zombie. Truly, a marvelous plot twist to this story without a plot, that has just started from your perspective, and from any perspective, really. Inexplicably, you are a zombie, though that information would need to be explained by some unknown narrator, as you are most certainly unable to think in your present condition.
+>X
+5
+
+
 
