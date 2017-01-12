@@ -1,4 +1,4 @@
-/* SchoolQuest (Working Title) //<>// //<>//
+/* SchoolQuest (Working Title) //<>//
  
  A text adventure by Zack.
  
@@ -28,18 +28,23 @@ AudioOutput note;
 String storyline[]; //Array of Text. This makes all the everything work.
 String[] menuButtons = {"SchoolQuest", "The Void", "Quit"};
 String[] playerLastNames = {"Amiton", "Zinner", "Ostomel", "Stevenson"}, friendLastNames = {"Johnson", "Peterson", "Mitchell", "Anderson"};
-String friendLastName,  playerLastName;
+String friendLastName, playerLastName;
 String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet"; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
 ArrayList<Screen> schoolQuestScreens, voidScreens; 
-Screen menuScreen;
+Screen inventoryScreen;
+Menu menu;
 int currentScreen; //Current screen in the screens ArrayList being shown
 int loopCount = 10000;
 boolean mouseIsReleased, drawScreen, songSelected; //Used to trigger button presses
 String songName;
-boolean[] clothingChoice = new boolean[3];
+boolean clothingChoice[] = new boolean[3], computerObtained;
 int state;
 int time;
-int playerLockerNumber, friendLockerNumber;
+int lockerNumbers;
+int bgColor = 255;
+String playerLockerNumber, friendLockerNumber;
+StringList inventoryMaster = new StringList();
+StringList inventory = new StringList();
 
 void setup()
 {
@@ -49,15 +54,25 @@ void setup()
   minim = new Minim(this);
   playerLastName = playerLastNames[(int)random(0, 4)];
   friendLastName = friendLastNames[(int)random(0, 4)];
+  lockerNumbers = (int)random(100);
+  playerLockerNumber = String.valueOf(lockerNumbers);
+  lockerNumbers = (int)random(100);
+  friendLockerNumber = String.valueOf(lockerNumbers);
+  if (friendLockerNumber == playerLockerNumber)
+  {
+    playerLockerNumber = String.valueOf(108);
+  }
   schoolQuestScreens = new ArrayList<Screen>();
   voidScreens = new ArrayList<Screen>();
   drawScreen = true;
   storyline = loadStrings("SchoolQuest.zk");
   Parse();
+  //inventoryMaster.print();
 }
 
 void draw()
 {
+  println(currentScreen);
   CheckBooleans();
   if (songSelected)
   {
@@ -67,8 +82,8 @@ void draw()
   switch(state)
   {
   case 0:
-    menuScreen = new Screen("\n\n\n\n\n\n\nChoose a Text Adventure", " ", menuButtons, 255);
-    menuScreen.UpdateMenu();
+    menu = new Menu("\n\n\n\n\n\n\nChoose a Text Adventure", menuButtons);
+    menu.UpdateMenu();
     break;
   case 1:  
     if (schoolQuestScreens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
@@ -96,12 +111,17 @@ void draw()
     break;
   case 3:
     exit();
+  case 4:
+    inventoryScreen = new Screen("Inventory", menuButtons);
+    inventoryScreen.UpdateInventory();
+    break;
   }
 
   if (currentScreen == 0)
   {
     drawScreen = false;
   }
+
   mouseIsReleased = false; //mouseIsReleased is continually set to false so that the releasing of mouse is only registered for one frame, else would trigger buttons at any time
 }
 
@@ -184,8 +204,7 @@ void Parse() //The real bread and butter of the program
       i++; //Increasing i by 1 puts the current line at the line after the carat, which tells the screens each button should lead to. 
       int[] goesTo; //Where each  button points to 
       goesTo = int(split(storyline[i], ", ")); //Same deal as buttons.
-      i++;
-      schoolQuestScreens.add(new Screen(title, text, buttonText, goesTo, 255)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
+      schoolQuestScreens.add(new Screen(title, text, buttonText, goesTo)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
     }
     if (storyline[i].equals("$") || storyline[i].equals("$ ")) //Looks for the line with only a # (or # with a space, in case of accidental space, to prevent issue)
     { //If it finds this line, it knows that a "screen chunk" is present
@@ -208,7 +227,19 @@ void Parse() //The real bread and butter of the program
       int[] goesTo; //Where each  button points to 
       goesTo = int(split(storyline[i], ", ")); //Same deal as buttons.
       i++;
-      voidScreens.add(new Screen(title, text, buttonText, goesTo, 255)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
+      voidScreens.add(new Screen(title, text, buttonText, goesTo)); //Using all of this data, create new screen, with title at top, text as body, buttonText[] on buttons, and goesTo coming into play when button is clicked
+    }
+
+    if (storyline[i].equals("="))
+    {
+      i++;        
+      int j = 0;
+      while (storyline[i].charAt(0) != '>')
+      {
+        inventoryMaster.set(j, storyline[i]);
+        i++;
+        j++;
+      }
     }
   }
 }
@@ -229,6 +260,17 @@ void mouseReleased()
 
 void CheckBooleans()
 {
+  //Inventory Tests//
+  if (currentScreen == 1)
+  {
+    computerObtained = true;
+  }
+
+  if (computerObtained)
+  {
+    inventory.set(1, inventoryMaster.get(2));
+  }
+
   //Clothing Choice Begin//
   if (currentScreen == 6)
   {

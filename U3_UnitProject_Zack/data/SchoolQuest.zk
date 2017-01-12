@@ -3,6 +3,18 @@ Welcome to SchoolQuest!
 Clothing Choice: 1, 2, 3
 TalkedTo: 1, 2, 3
 
+Items
+=
+Flashlight
+Deck of Cards
+Computer
+Robot
+Phone
+Hello
+Mouse
+Butt
+>
+
 0
 #
 Placeholder
@@ -383,7 +395,7 @@ Shushing @FriendName, you motion for him to follow along. A few doors down, you 
 39
 #
 A Hero Seeks Assistance
-Pushing open the glass door, you and @FriendName step into the air conditioned office. At the desk, a stern-faced lady stares back at you—Ms. Kean, as her nameplate displays—rifling through a stack of papers. You don’t seem to have been the first to enter the office this morning, judging by his disinterested expression. In fact, you bet she’ll probably know exactly why you’re here. No offense to Ms. Kean, but she doesn’t exactly seem the type to visit on a lark.
+Pushing open the glass door, you and @FriendName step into the air conditioned office. At the desk, a stern-faced lady stares back at you. You don’t seem to have been the first to enter the office this morning, judging by her disinterested expression. In fact, you bet she’ll probably know exactly why you’re here. 
 
 “...last name, grade.” She says nothing more, waiting expectantly for a response. Clearly, this isn’t her first rodeo.
 
@@ -391,11 +403,7 @@ Pushing open the glass door, you and @FriendName step into the air conditioned o
 
 Raising an eyebrow at you, @FriendName says, “Yeah, I’m @FriendName @FriendLastName, also 9th. Nice to meet you.” Suck up. He flashes a huge smile to Ms. Kean, though she simply glares back. Really not much for smiling, it seems.
 
-“@PlayerLastName...locker #@PlayerLockerNumber. @FriendLastName…locker #@FriendLockerNumber. Here are your schedules, don’t lose them, you won’t get another one.” Sighing (for what must’ve been the fifth time), she hands over two schedules. Then, as an afterthought: “...have...a good day.” 
-
-In unison, the two of you thank her, and back out of the office. Glancing down at your schedule, you can see that you have 
-
-
+“@PlayerLastName...locker #@PlayerLockerNumber. @FriendLastName…locker #@FriendLockerNumber. Here are your schedules, don’t lose them. You won’t get another one.” She glares back at us, handing over two schedules. Then, as an afterthought: “...have...a good day.” You both glance at each one another, waiting for the other to make a move.
 
 > X
 2

@@ -2,81 +2,66 @@ class Screen //<>//
 {
   private Button[] _options;
   private Button _musicSelector;
-  private Button[] _menu;
+  private Button _inventory;
   private String[] _buttonText;
-  private String[] _menuText = {" SchoolQuest ", " The Void ", " Quit "};
   public int[] _goesTo; 
   private String _title;
   private String _text;
   private int _tbW, _tbH; //Text Box Width and Height
   private int _textSize;
-  private int _bgColor;
   JFileChooser _fc;
   FileNameExtensionFilter _filter;
   boolean _buttonPressed;
 
-  public Screen(String title, String text, String[] buttonText, int[] goesTo, int bgColor)
+  public Screen(String title, String text, String[] buttonText, int[] goesTo)
   {
     _title = title;
     _text = text;
     _buttonText = buttonText; 
     _tbW = width - width/48;
     _tbH = height - height/3;
-    _bgColor = bgColor;
     _textSize = 25;
     _goesTo = goesTo;
     _options = new Button[_buttonText.length];
-    _menu = new Button[_menuText.length];
   }
 
-  public Screen(String title, String text, String[] buttonText, int bgColor)
+  public Screen(String title, String[] buttonText)
   {
     _title = title;
-    _text = text;
     _buttonText = buttonText; 
-    _tbW = width - width/48;
-    _tbH = height - height/3;
-    _bgColor = bgColor;
     _textSize = 25;
     _options = new Button[_buttonText.length];
-    _menu = new Button[_menuText.length];
   }
 
   public void Update()
   {
-    background(_bgColor); 
+    background(bgColor); 
     DrawButtons(); //Draws buttons
-    UpdateNames(); //Updates names
+    UpdateInfo(); //Updates names
     DrawText();
-    int x = _buttonText.length;
-    switch(x)
-    {
-    case 1:
-      println("Buttons Lead To: " + _goesTo[x - x] + " & Screen Is: " + currentScreen);
-      break;
-    case 2:  
-      println("Buttons Lead To: " + _goesTo[x - x] + ", " + _goesTo[x - 1] + " & Screen Is: " + currentScreen);
-      break;
-    case 3:
-      println("Buttons Lead To: " + _goesTo[x - x]+ ", " + _goesTo[x - 2] + ", " + _goesTo[x - 1] + " & Screen Is: " + currentScreen + " o " + clothingChoice[2]);
-      break;
-    default:
-      println("There Are No Buttons On Screen! Screen: " + currentScreen);
-      break;
-    }
+    //int x = _buttonText.length;
+    //switch(x)
+    //{
+    //case 1:
+    //  println("Buttons Lead To: " + _goesTo[x - x] + " & Screen Is: " + currentScreen);
+    //  break;
+    //case 2:  
+    //  println("Buttons Lead To: " + _goesTo[x - x] + ", " + _goesTo[x - 1] + " & Screen Is: " + currentScreen);
+    //  break;
+    //case 3:
+    //  println("Buttons Lead To: " + _goesTo[x - x]+ ", " + _goesTo[x - 2] + ", " + _goesTo[x - 1] + " & Screen Is: " + currentScreen + " o " + clothingChoice[2]);
+    //  break;
+    //default:
+    //  println("There Are No Buttons On Screen! Screen: " + currentScreen);
+    //  break;
+    //}
   }
-  
-  public void UpdateMenu()
-  {
-   background(_bgColor);
-   DrawMenu();
-  }
-
 
   private void DrawButtons()
   {
     DrawOptions();
     DrawMusicSelector();
+    DrawInventoryButton();
   }
 
   private void DrawOptions() //Draws 3 buttons, assigns to them the goesTo information from Parse() 
@@ -91,27 +76,30 @@ class Screen //<>//
     }
   }
 
-  private void DrawMenu()
-  {
-    DrawText();
-    for (int i = 0; i < _menuText.length; i++)
-    {
-      _menu[i] = new Button(_menuText[i], width/2 - _menuText[i].length(), height - height/3 + (height/18 * i), i + 1);
-    }
-    for (int i = 0; i < _menuText.length; i++)
-    {
-      _menu[i].Update3();
-    }
-  }
-
   private void DrawMusicSelector()
   {
-    _musicSelector = new Button(" Music Selector ", float(width - width/12), float(height - height/3), 0); 
+    _musicSelector = new Button(" Music Selector ", float(width - width/12), float(height - height/3)); 
     _musicSelector.Update2();
   }
 
+  private void DrawInventoryButton()
+  {
+    _inventory = new Button(" Inventory ", float(width/12), float(height - height/3), 4);
+    _inventory.Update3();
+  }
 
-  private void UpdateNames()
+  public void UpdateInventory()
+  {
+    background(bgColor);
+    DrawTitle();
+    for(int i = 0; i < inventory.size(); i++)
+    {
+      text(inventory.get(i), width/16, height/15 * i + height/15);
+    }
+  }
+
+
+  private void UpdateInfo()
   {
     if (currentScreen < 33 || currentScreen > 37)
     {
@@ -174,6 +162,8 @@ class Screen //<>//
         enemyName = "Ranine";
         lackeyName = "Janet";
       }
+      _text = _text.replaceAll("#@PlayerLockerNumber", playerLockerNumber);
+      _text = _text.replaceAll("#@FriendLockerNumber", friendLockerNumber);
     }
   }
   private void DrawText()
@@ -184,5 +174,14 @@ class Screen //<>//
     text(_title, width/2, height/40);  //Puts title at top center of screen
     textAlign(LEFT);
     text(_text, width/48, height/25, _tbW, _tbH); //Puts body text under title, goes until limits specified by textbox
+  }
+
+  public void DrawTitle()
+  {
+    textSize(_textSize);
+    fill(0);
+    textAlign(CENTER);
+    text(_title, width/2, height/40);  //Puts title at top center of screen
+    textAlign(LEFT);
   }
 }
