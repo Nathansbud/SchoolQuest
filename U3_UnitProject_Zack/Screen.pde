@@ -68,7 +68,7 @@ class Screen //<>//
   {
     for (int i = 0; i < _buttonText.length; i++) //Make as many buttons as there are labels for, no more no less; if 2 labels, 2 buttons; if 3 labels, 3 buttons.
     {
-      _options[i] = new Button(_buttonText[i], width/2 - _buttonText[i].length(), height - height/3 + (height/18 * i), _goesTo[i]);
+      _options[i] = new Button(_buttonText[i], width/2 - _buttonText[i].length(), height - height/3 + (height/18 * i), _goesTo[i], "Story");
     }
     for (int i = 0; i < _buttonText.length; i++) //Updates said buttons
     {
@@ -78,27 +78,16 @@ class Screen //<>//
 
   private void DrawMusicSelector()
   {
-    _musicSelector = new Button(" Music Selector ", float(width - width/12), float(height - height/3)); 
-    _musicSelector.Update2();
+    _musicSelector = new Button(" Music Selector ", float(width - width/12), float(height - height/3), "Music"); 
+    _musicSelector.Update();
   }
 
   private void DrawInventoryButton()
   {
-    _inventory = new Button(" Inventory ", float(width/12), float(height - height/3), 4);
-    _inventory.Update3();
+    _inventory = new Button(" Inventory ", float(width/12), float(height - height/3), "Inventory");
+    _inventory.Update();
   }
-
-  public void UpdateInventory()
-  {
-    background(bgColor);
-    DrawTitle();
-    for(int i = 0; i < inventory.size(); i++)
-    {
-      text(inventory.get(i), width/16, height/15 * i + height/15);
-    }
-  }
-
-
+  
   private void UpdateInfo()
   {
     if (currentScreen < 33 || currentScreen > 37)
@@ -162,8 +151,9 @@ class Screen //<>//
         enemyName = "Ranine";
         lackeyName = "Janet";
       }
-      _text = _text.replaceAll("#@PlayerLockerNumber", playerLockerNumber);
-      _text = _text.replaceAll("#@FriendLockerNumber", friendLockerNumber);
+      _text = _text.replaceAll("@PlayerLockerNumber", playerLockerNumber);
+      _text = _text.replaceAll("@FriendLockerNumber", friendLockerNumber);
+      _text = _text.replaceAll("@LockerDif", lockDif);
     }
   }
   private void DrawText()

@@ -1,6 +1,6 @@
 class Button
 {
-  private String _labelText; 
+  private String _labelText, _buttonType; 
   private float _posX, _posY, _labelTextSize, _buttonWidth, _buttonHeight, _buttonPosX;
   private int _buttonCurve;  
   private int _goesTo;
@@ -10,8 +10,9 @@ class Button
   FileNameExtensionFilter _filter;
   JDialog dialog;
 
-  public Button(String labelText, float posX, float posY, int goesTo) 
+  public Button(String labelText, float posX, float posY, int goesTo, String buttonType) 
   {
+    _buttonType = buttonType;
     _goesTo = goesTo;
     _labelText = labelText;
     _labelTextSize = width/72;
@@ -26,8 +27,9 @@ class Button
     _buttonPosX = _posX - 0.5 * textWidth(_labelText); //Button positioning is at centerpoint of text - half of the text's horizontal length.
   }
 
-  public Button(String labelText, float posX, float posY) 
+  public Button(String labelText, float posX, float posY, String buttonType) 
   {
+    _buttonType = buttonType;
     _labelText = labelText;
     _labelTextSize = width/72;
     _posX = posX;
@@ -63,37 +65,22 @@ class Button
       }  
       if (_buttonPressed)
       {
-        currentScreen = _goesTo;
-      }
-    }
-  }
-
-  public void CheckPresses2()
-  {
-    if (mouseIsReleased) //If mouse ever released, check if mouse is over button. If so, button has been pressed, and currentScreen = that button's "_goesTo"
-    {
-      if (mouseX > _buttonPosX && mouseX < _buttonPosX + _buttonWidth && mouseY > _posY && mouseY < _posY + _buttonHeight)
-      {
-        _buttonPressed = true;
-      }
-      if (_buttonPressed)
-      {
-        FileSelector();
-      }
-    }
-  }
-
-  public void CheckPresses3()
-  {
-    if (mouseIsReleased) //If mouse ever released, check if mouse is over button. If so, button has been pressed, and currentScreen = that button's "_goesTo"
-    {
-      if (mouseX > _buttonPosX && mouseX < _buttonPosX + _buttonWidth && mouseY > _posY && mouseY < _posY + _buttonHeight)
-      {
-        _buttonPressed = true;
-      }
-      if (_buttonPressed)
-      {
-        state = _goesTo;
+        switch(_buttonType)
+        {
+        case "Story":
+          currentScreen = _goesTo;
+          break;
+        case "Music": 
+          FileSelector();
+          break;
+          //case:
+        case "Menu":
+          state = _goesTo;
+          break;
+        case "Inventory":
+          Inventory();
+          break;
+        }
       }
     }
   }
@@ -102,18 +89,6 @@ class Button
   {
     Draw();
     CheckPresses();
-  }
-
-  public void Update2()
-  {
-    Draw();
-    CheckPresses2();
-  }
-
-  public void Update3()
-  {
-    Draw();
-    CheckPresses3();
   }
 
   private void FileSelector()
@@ -134,5 +109,30 @@ class Button
     {
       _fc.cancelSelection();
     }
+  }
+
+  private void Inventory()
+  {
+    Object[] options = inventory.toArray();
+    String choice = (String)JOptionPane.showInputDialog(null, "Choose an item?", "Item Selection", JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+    switch(choice)
+    {
+    case "Computer":
+      switch(currentScreen)
+      {
+      default:
+        JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
+        break;
+      case 2:
+        JOptionPane.showMessageDialog(null, "Computer successfully used!", "Item Used", JOptionPane.DEFAULT_OPTION);
+        currentScreen = 40;
+        break;
+      case 40:
+        String computerPassword = (String)JOptionPane.showInputDialog("Please Enter Password");
+        break;
+      }
+      break;
+    }
+    int index = inventory.indexOf(choice);
   }
 }

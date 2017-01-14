@@ -1,4 +1,4 @@
-/* SchoolQuest (Working Title) //<>//
+/* SchoolQuest (Working Title) //<>// //<>// //<>//
  
  A text adventure by Zack.
  
@@ -17,10 +17,13 @@ import java.awt.Window;
 import java.awt.Dialog;
 import java.awt.FileDialog;
 import javax.swing.JComponent;
-import javax.swing.JFileChooser; //...and it ends here.//FileNameExtensionFilter starts here...
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;  //...and it ends here.
-import javax.swing.JDialog;
+import javax.swing.JFileChooser; //...and it ends here. 
+import javax.swing.filechooser.FileFilter; //FileNameExtensionFilter starts here...
+import javax.swing.filechooser.FileNameExtensionFilter;  //...the end.
+import javax.swing.JDialog; //Dialog begins here...
+import javax.swing.JButton; 
+import javax.swing.JOptionPane;
+import java.util.List; //...viola! Dialog over.
 
 Minim minim;
 AudioPlayer selectedSong;
@@ -31,33 +34,38 @@ String[] playerLastNames = {"Amiton", "Zinner", "Ostomel", "Stevenson"}, friendL
 String friendLastName, playerLastName;
 String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet"; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
 ArrayList<Screen> schoolQuestScreens, voidScreens; 
-Screen inventoryScreen;
+boolean schoolQuest, theVoid;
 Menu menu;
 int currentScreen; //Current screen in the screens ArrayList being shown
 int loopCount = 10000;
 boolean mouseIsReleased, drawScreen, songSelected; //Used to trigger button presses
 String songName;
-boolean clothingChoice[] = new boolean[3], computerObtained;
+boolean clothingChoice[] = new boolean[3], lockersRule, lockerLocked; //Choices
+boolean computerObtained, buttObtained; //Inventory
 int state;
 int time;
-int lockerNumbers;
+int lockerNumbers[] = new int[2];
+String lockDif;
 int bgColor = 255;
 String playerLockerNumber, friendLockerNumber;
-StringList inventoryMaster = new StringList();
-StringList inventory = new StringList();
+ArrayList<String> inventoryMaster = new ArrayList<String>();
+ArrayList<String> inventory = new ArrayList<String>();
 
 void setup()
 {
+  JDialog.isDefaultLookAndFeelDecorated();
+  JFileChooser.getDefaultLocale();
+  JOptionPane.getDefaultLocale();
   fullScreen();
   state = 0;
   currentScreen = 1;
   minim = new Minim(this);
   playerLastName = playerLastNames[(int)random(0, 4)];
   friendLastName = friendLastNames[(int)random(0, 4)];
-  lockerNumbers = (int)random(100);
-  playerLockerNumber = String.valueOf(lockerNumbers);
-  lockerNumbers = (int)random(100);
-  friendLockerNumber = String.valueOf(lockerNumbers);
+  lockerNumbers[0] = (int)random(100);
+  playerLockerNumber = String.valueOf(lockerNumbers[0]);
+  lockerNumbers[1] = (int)random(100);
+  friendLockerNumber = String.valueOf(lockerNumbers[1]);
   if (friendLockerNumber == playerLockerNumber)
   {
     playerLockerNumber = String.valueOf(108);
@@ -67,12 +75,17 @@ void setup()
   drawScreen = true;
   storyline = loadStrings("SchoolQuest.zk");
   Parse();
-  //inventoryMaster.print();
+  int lockDifInt = abs(lockerNumbers[0] - lockerNumbers[1]);
+  if (lockDifInt < 20)
+  {
+    lockersRule = true;
+  }
+  lockDif = String.valueOf(lockDifInt);
 }
 
 void draw()
 {
-  println(currentScreen);
+  println(inventory + ", Current Screen is " + currentScreen);
   CheckBooleans();
   if (songSelected)
   {
@@ -90,6 +103,7 @@ void draw()
     {
       if (drawScreen)
       {
+        schoolQuest = true;
         schoolQuestScreens.get(currentScreen).Update();
       } else
       {
@@ -111,10 +125,6 @@ void draw()
     break;
   case 3:
     exit();
-  case 4:
-    inventoryScreen = new Screen("Inventory", menuButtons);
-    inventoryScreen.UpdateInventory();
-    break;
   }
 
   if (currentScreen == 0)
@@ -233,12 +243,10 @@ void Parse() //The real bread and butter of the program
     if (storyline[i].equals("="))
     {
       i++;        
-      int j = 0;
       while (storyline[i].charAt(0) != '>')
       {
-        inventoryMaster.set(j, storyline[i]);
+        inventoryMaster.add(storyline[i]);
         i++;
-        j++;
       }
     }
   }
@@ -264,32 +272,49 @@ void CheckBooleans()
   if (currentScreen == 1)
   {
     computerObtained = true;
+    UpdateInventory();
   }
 
-  if (computerObtained)
+  if (currentScreen == 4)
   {
-    inventory.set(1, inventoryMaster.get(2));
+    buttObtained = true;
   }
 
   //Clothing Choice Begin//
-  if (currentScreen == 6)
+  if (schoolQuest)
   {
-    clothingChoice[0] = true;
-  }
-  if (currentScreen == 7)
-  {
-    clothingChoice[1] = true;
-  }
-  if (currentScreen == 8)
-  {
-    clothingChoice[2] = true;
-  }
-  if (clothingChoice[1] == true && currentScreen == 17)
-  {
-  }
-  if (clothingChoice[2] == true && currentScreen == 17)
-  {
-    currentScreen = 39;
+    if (currentScreen == 6)
+    {
+      clothingChoice[0] = true;
+    }
+    if (currentScreen == 7)
+    {
+      clothingChoice[1] = true;
+    }
+    if (currentScreen == 8)
+    {
+      clothingChoice[2] = true;
+    }
+    if (clothingChoice[1] == true && currentScreen == 17)
+    {
+    }
+    if (clothingChoice[2] == true && currentScreen == 17)
+    {
+      currentScreen = 39;
+    }
+    if (currentScreen == 40 && lockersRule)
+    {
+      currentScreen = 41;
+    }
   }
   //Clothing Choice End//
+}
+
+void UpdateInventory()
+{
+  if (inventory.size() == 0)
+  {
+    inventory.add(0, inventoryMaster.get(2));
+    computerObtained = false;
+  }
 }

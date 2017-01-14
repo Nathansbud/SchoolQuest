@@ -21,11 +21,11 @@ class Menu extends Screen //I was dying from the clutter over on Screen, so I'm 
     DrawTitle();
     for (int i = 0; i < _menuText.length; i++)
     {
-      _menu[i] = new Button(_menuText[i], width/2 - _menuText[i].length(), height - height/3 + (height/18 * i), i + 1);
+      _menu[i] = new Button(_menuText[i], width/2 - _menuText[i].length(), height - height/3 + (height/18 * i), i + 1, "Menu");
     }
     for (int i = 0; i < _menuText.length; i++)
     {
-      _menu[i].Update3();
+      _menu[i].Update();
     }
   }
 }

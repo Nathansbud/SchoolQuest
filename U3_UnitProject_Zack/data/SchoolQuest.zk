@@ -403,11 +403,52 @@ Pushing open the glass door, you and @FriendName step into the air conditioned o
 
 Raising an eyebrow at you, @FriendName says, “Yeah, I’m @FriendName @FriendLastName, also 9th. Nice to meet you.” Suck up. He flashes a huge smile to Ms. Kean, though she simply glares back. Really not much for smiling, it seems.
 
-“@PlayerLastName...locker #@PlayerLockerNumber. @FriendLastName…locker #@FriendLockerNumber. Here are your schedules, don’t lose them. You won’t get another one.” She glares back at us, handing over two schedules. Then, as an afterthought: “...have...a good day.” You both glance at each one another, waiting for the other to make a move.
+“@PlayerLastName...locker #@PlayerLockerNumber. @FriendLastName...locker #@FriendLockerNumber. Here are your schedules, don’t lose them. You won’t get another one.” She glares back at us, handing over two schedules. Then, as an afterthought: “...have...a good day.” You both glance at each one another, waiting for the other to make a move.
 
-> X
-2
- 
+> Leave Office, Remain in Office
+40
+
+40
+#
+A Hero Is Scheduled
+Returning out the door you entered, both you and @FriendName step out into the hallway, eager to be away from the secretary—from the looks of it, the feeling had been mutual. Schedule in hand, you both stand in silence for a minute, processing the information in front of you. Definitely not too shabby: English, Science, PE, and Coding. Certainly could’ve been worse. Your locker sucks, though; @LockerDif apart, for crying out loud? Talk about a disaster! Glancing over, you can see that you aren't the only one annoyed about the locker numbers.
+
+“This sucks!” @PlayerName complains, looking back at you, “our lockers are so far apart!” He groans. “At least our schedules are similar, right? What do you have first, English?”
+
+You breathe a sigh of relief. “Yeah. pretty sure our schedules are the same. Where’s your locker at?” @FriendName points around the corner to some location in the distance. “There,” he complains, “a mile and a half away. I’ve gotta put some stuff away, but I’ll see you in class, alright?”
+> Wave Goodbye to @FriendName
+42
+
+41
+#
+A Hero Is Scheduled
+Exiting the office, you exhale the breath you’d be holding in. Ms. Kean certainly isn’t your favorite person thus far. Schedule in hand, you both stand in silence for a moment, reading over your classes for the day. Luckily, your schedule for doesn’t seem half bad: English, Science, PE, Coding. Certainly not the worst that it could have been. Your locker number is also pretty solid—both you and @FriedName are only a stones throw apart, with you having locker #@PlayerLockerNumber and him a few blocks away at #@FriendLockerNumber. “Great locker, no?”
+
+@FriendName grins back at you. “Awesome. For a moment there I was worried he was going to give us lockers on opposite ends of the school or something. You have English first? Followed by Science?”
+
+You nod back in confirmation. “Yeah—I think we have the same schedule? English, Science, PE, Coding…” @FriendName laughs back, giving you a thumbs up. “Sweet.”
+
+Turning your body slightly, you gesture wildly in the direction of the lockers in the general vicinity. “Shall we walk to our lockers?” 
+> Head to the Lockers
+50
+
+42
+#
+A Hero Is Companionless
+Sighing, you walk towards what appears to be your locker, #@PlayerLockerNumber. It’s relatively quiet around your locker, though (evidently, your peers already dropped their things). Makes senses though: as the clock is quick to inform, class starts in a mere 5 minutes. Perhaps it WOULD be wise not to be late to your first day, but hey, you’re @PlayerName; lateness practically runs in your blood. Your locker has a lock on it, though the combination doesn’t appear to have been set. Regardless, you set down your lunch box and backpack, grabbing your computer out from the largest pocket, along with a notebook you packed the night before (not that you really expect to be taking too many notes on the first day of class). 
+
+Sufficiently geared up, you shut the door to your locker, contemplating whether or not to set a combination. While the school doesn’t seem to be a particularly dangerous place, the lock might be a good idea. All the lockers around you appear to  be sealed—save for the one below you, but he seems to be the exception rather than the rule—so perhaps they know something you don’t? If they do, it’s your loss. What could happen to a bag and a lunchbox? Well, to be fair, you’ve seen people come to blows over a sandwich in the past, but your lunch box doesn’t really appear covet-worthy. Certainly not worth stealing. Probably. Hopefully.
+
+What will you do?
+> Get to Class, Meet Up With @FriendName, Lock Locker…Just In Case, Explore School
+43
+
+43
+#
+A Hero Further His Education
+>
+
+
 
 0
 $
