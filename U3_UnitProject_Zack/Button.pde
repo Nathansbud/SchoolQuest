@@ -94,13 +94,10 @@ class Button
   private void FileSelector()
   {
     _fc = new JFileChooser();
-    _fc.setCurrentDirectory(new File(System.getProperty("user.home")));
     _filter = new FileNameExtensionFilter("Music Files", "mp3", "wav");
-    _fc.setDragEnabled(true);
     _fc.setFileFilter(_filter);
-    _fc.setCurrentDirectory(new File(System.getProperty("user.home")));
-    int result  = _fc.showOpenDialog(null);
-    if (result == _fc.APPROVE_OPTION) 
+    int returnVal = _fc.showOpenDialog(null);
+    if (returnVal == _fc.APPROVE_OPTION) 
     {
       File selectedFile = _fc.getSelectedFile();
       songName = selectedFile.getAbsolutePath();
@@ -110,29 +107,49 @@ class Button
       _fc.cancelSelection();
     }
   }
-
+  
   private void Inventory()
   {
     Object[] options = inventory.toArray();
     String choice = (String)JOptionPane.showInputDialog(null, "Choose an item?", "Item Selection", JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+    if (choice == null)
+    {
+      return;
+    }
     switch(choice)
     {
     case "Computer":
       switch(currentScreen)
       {
+      case 2:
+        String computerPassword = (String)JOptionPane.showInputDialog("Please Enter Password");
+        switch(computerPassword)
+        {
+        case "zack":
+          JOptionPane.showMessageDialog(null, "Logged in successfully!", "Password Attempt", JOptionPane.DEFAULT_OPTION);
+          currentScreen = 40;
+          break;
+        default:
+          JOptionPane.showMessageDialog(null, "Incorrect password.", "Password Attempt", JOptionPane.DEFAULT_OPTION);
+          break;
+        }
+        break;
       default:
         JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
         break;
-      case 2:
-        JOptionPane.showMessageDialog(null, "Computer successfully used!", "Item Used", JOptionPane.DEFAULT_OPTION);
-        currentScreen = 40;
-        break;
-      case 40:
-        String computerPassword = (String)JOptionPane.showInputDialog("Please Enter Password");
-        break;
       }
       break;
+    case "Robot":
+      switch(currentScreen)
+      {
+      case 7:
+        JOptionPane.showMessageDialog(null, "Beep boop.", "BEEP", JOptionPane.DEFAULT_OPTION);
+        break;
+      default:
+        JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
+        break;
+      }
     }
-    int index = inventory.indexOf(choice);
+    //int index = inventory.indexOf(choice);
   }
 }

@@ -84,10 +84,13 @@ class Screen //<>//
 
   private void DrawInventoryButton()
   {
-    _inventory = new Button(" Inventory ", float(width/12), float(height - height/3), "Inventory");
-    _inventory.Update();
+    if (inventory.size() > 0)
+    {
+      _inventory = new Button(" Inventory ", float(width/12), float(height - height/3), "Inventory");
+      _inventory.Update();
+    }
   }
-  
+
   private void UpdateInfo()
   {
     if (currentScreen < 33 || currentScreen > 37)
