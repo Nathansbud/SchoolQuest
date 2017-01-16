@@ -1,18 +1,17 @@
 class Button
 {
-  private String _labelText, _buttonType; 
-  private float _posX, _posY, _labelTextSize, _buttonWidth, _buttonHeight, _buttonPosX;
+  private String _labelText, _buttonType; //Label Text: Button Text, Button Type: Type of Button (Story Option, Menu, Music Selector, Inventory...)
+  private float _posX, _posY, _labelTextSize, _buttonWidth, _buttonHeight, _buttonPosX; //Coordinates/sizing of button (and labelTextSize)
   private int _buttonCurve;  
-  private int _goesTo;
-  private int _textColor, _buttonColor;
-  private boolean _buttonPressed;
-  JFileChooser _fc;
-  FileNameExtensionFilter _filter;
-  JDialog dialog;
-
-  public Button(String labelText, float posX, float posY, int goesTo, String buttonType) 
+  private int _goesTo; //Button lead-to on click
+  private int _textColor, _buttonColor; //Color of text/button color
+  private boolean _buttonPressed; //Checks to see if button pressed
+  private JFileChooser _fc; //Music Selecter file selector
+  private FileNameExtensionFilter _musicFilter; //Music-type file extension filter
+  
+  public Button(String labelText, float posX, float posY, int goesTo, String buttonType) //Story Buttons
   {
-    _buttonType = buttonType;
+    _buttonType = buttonType; 
     _goesTo = goesTo;
     _labelText = labelText;
     _labelTextSize = width/72;
@@ -27,7 +26,7 @@ class Button
     _buttonPosX = _posX - 0.5 * textWidth(_labelText); //Button positioning is at centerpoint of text - half of the text's horizontal length.
   }
 
-  public Button(String labelText, float posX, float posY, String buttonType) 
+  public Button(String labelText, float posX, float posY, String buttonType) //Non-story buttons
   {
     _buttonType = buttonType;
     _labelText = labelText;
@@ -39,8 +38,8 @@ class Button
     _labelTextSize = 20;
     _textColor = 0;
     _buttonColor = 255;
-    _buttonWidth = textWidth(_labelText); //Width of buttons is the horizontal size of the button label.
-    _buttonPosX = _posX - 0.5 * textWidth(_labelText); //Button positioning is at centerpoint of text - half of the text's horizontal length.
+    _buttonWidth = textWidth(_labelText); 
+    _buttonPosX = _posX - 0.5 * textWidth(_labelText); 
   }
 
   private void Draw()
@@ -57,28 +56,28 @@ class Button
 
   public void CheckPresses()
   {
-    if (mouseIsReleased) //If mouse ever released, check if mouse is over button. If so, button has been pressed, and currentScreen = that button's "_goesTo"
+    if (mouseIsReleased) //If mouse ever released, check if mouse is over button. 
     {
       if (mouseX > _buttonPosX && mouseX < _buttonPosX + _buttonWidth && mouseY > _posY && mouseY < _posY + _buttonHeight)
       {
-        _buttonPressed = true;
+        _buttonPressed = true; //If so, button pressed
       }  
       if (_buttonPressed)
       {
-        switch(_buttonType)
+        switch(_buttonType) //Look to see what type of button
         {
-        case "Story":
+        case "Story": //If story: current Screen = "_goesTo" of button.
           currentScreen = _goesTo;
           break;
-        case "Music": 
+        case "Music": //If music: open file selector
           FileSelector();
           break;
           //case:
-        case "Menu":
+        case "Menu": //If menu: change state to Button's _goesTo
           state = _goesTo;
           break;
-        case "Inventory":
-          Inventory();
+        case "Inventory": //If inventory: open inventory
+          InventoryManager();
           break;
         }
       }
@@ -93,11 +92,11 @@ class Button
 
   private void FileSelector()
   {
-    _fc = new JFileChooser();
-    _filter = new FileNameExtensionFilter("Music Files", "mp3", "wav");
-    _fc.setFileFilter(_filter);
-    int returnVal = _fc.showOpenDialog(null);
-    if (returnVal == _fc.APPROVE_OPTION) 
+    _fc = new JFileChooser(); //Create file chooser
+    _musicFilter = new FileNameExtensionFilter("Music Files", "mp3", "wav"); //Create filter
+    _fc.setFileFilter(_musicFilter); //Set filter
+    int returnVal = _fc.showOpenDialog(null); //Open selector
+    if (returnVal == _fc.APPROVE_OPTION)  //Check to see if approved
     {
       File selectedFile = _fc.getSelectedFile();
       songName = selectedFile.getAbsolutePath();
@@ -108,44 +107,59 @@ class Button
     }
   }
 
-  private void Inventory()
+  private void InventoryManager()
   {
-    Object[] options = inventory.toArray();
-    String choice = (String)JOptionPane.showInputDialog(null, "Choose an item?", "Item Selection", JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
-    if (choice == null)
+    Object[] options = inventory.toArray(); //Inventory converted into Array of objects
+    String choice = (String)JOptionPane.showInputDialog(null, "Choose an item?", "Item Selection", JOptionPane.PLAIN_MESSAGE, null, options, options[0]); //Return string "choice" based on chosen item
+    if (choice == null) //In event that inventory is cancelled, do nada
     {
       return;
     }
-    switch(state)
+    switch(state) //Dunno if this does anything right now? Probably not. Too lazy to check right now. Lotta redundancies in this area 
     {
-     case 0:
-       options = null;
-       break;
+    case 0:
+      options = null;
+      break;
     }
-    switch(choice)
+    switch(choice) //Evaluate item chosen
     {
-    case "Laptop":
-      switch(currentScreen)
+    case "Laptop": //If laptop
+      switch(currentScreen) //Check screen
       {
-
-      default:
+      case 44: //Open game choice dialog
+        Object[] games = {"Crypt of the NecroDancer", "The Binding of Isaac", "Enter the Gungeon"};
+        int gameChoice = JOptionPane.showOptionDialog(frame, "Which game would you like to play?", "Game Selection", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, games, games[2]);
+        switch(gameChoice)
+        {
+        case 0: //NecroDancer
+          gameState = 0;
+          break;
+        case 1: //Isaac
+          gameState = 1;
+          break;
+        case 2: //Gungeon
+          gameState = 2;
+          break;
+        }
+        break;
+      default: //Else usually just don't do anything
         JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
         break;
       }
       break;
-    case "Robot":
+    case "Robot": //If robot
       switch(currentScreen)
       {
-      case 7:
+      case 7: //Beep.
         JOptionPane.showMessageDialog(null, "Beep boop.", "BEEP", JOptionPane.DEFAULT_OPTION);
         break;
-      default:
+      default: //...or nothing
         JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
         break;
       }
       break;
 
-    case "Desktop":
+    case "Desktop": //Same deal.
       switch(currentScreen)
       {
       case 2:

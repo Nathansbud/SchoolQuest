@@ -1,5 +1,5 @@
-/* SchoolQuest (Working Title) //<>// //<>//
- 
+/* SchoolQuest (Working Title) //<>//
+
  A choose your own text adventure by Zack.
  
  */
@@ -34,9 +34,8 @@ import java.util.List; //...viola! Dialog over.
 Minim minim = new Minim(this); //Minim Variables, Exhibit A
 AudioPlayer selectedSong; //Exhibit B
 String songName = null; //Exhibit C
-String startingCharacter;
+String startingCharacter; //Starting character of "screens" which tells Parse() that a screen is beginning; used as a switch.
 String storyline[]; //Array of Text. This makes all the everything work.
-String[] menuButtons = {"SchoolQuest", "The Void", "Quit"};
 String[] playerLastNames = {"Amiton", "Zinner", "Ostomel", "Stevenson"}, friendLastNames = {"Johnson", "Peterson", "Mitchell", "Anderson"};
 String friendLastName, playerLastName;
 String playerName = "", friendName = "", enemyName = "", lackeyName = "Janet"; //Strings used for player-input names of "characters." These replace the @CharacterName markers used in the textadventure.txt file
@@ -50,6 +49,7 @@ boolean clothingChoice[] = new boolean[3], lockersRule, lockerLocked; //"Choices
 boolean giveComputer, giveRobot; //Inventory (SchoolQuest)
 boolean giveMap; //Inventory (Void)
 int state = 0; //Menu State (0 is Menu, 1 is SchoolQuest, 2 is Void, 3 is Quit)
+int gameState; //Current "Game State" on Screen 44; player's choice of game to play
 int lockerNumbers[] = new int[2];
 String lockDif;
 int bgColor = 255;
@@ -62,9 +62,9 @@ ArrayList<String> inventory = new ArrayList<String>();
 void setup()
 {
   fullScreen();
-  playerLastName = playerLastNames[(int)random(0, 4)];
-  friendLastName = friendLastNames[(int)random(0, 4)];
-  lockerNumbers[0] = (int)random(100);
+  playerLastName = playerLastNames[(int)random(0, 4)]; //Player has a random last name
+  friendLastName = friendLastNames[(int)random(0, 4)]; //...so does friend
+  lockerNumbers[0] = (int)random(100); //Give random locker number
   playerLockerNumber = String.valueOf(lockerNumbers[0]);
   lockerNumbers[1] = (int)random(100);
   friendLockerNumber = String.valueOf(lockerNumbers[1]);
@@ -76,7 +76,7 @@ void setup()
   storyline = loadStrings("SchoolQuest.zk");
   Parse();
   int lockDifInt = abs(lockerNumbers[0] - lockerNumbers[1]);
-  if (lockDifInt < 20)
+  if (lockDifInt < 20) //Trigger boolean, which affects a screen; if lockersRule player & friend won't split up, else they will.
   {
     lockersRule = true;
   }
@@ -85,16 +85,16 @@ void setup()
 
 void draw()
 {
-  println(inventory.isEmpty() + ", Current Screen is " + currentScreen);
-  CheckBooleans();
+  println(inventory + ", Current Screen is " + currentScreen);
+  CheckBooleans(); 
   if (songSelected)
   {
     PlayMusic(); 
     songSelected = false;
   }
-  switch(state)
+  switch(state) //Various menu states
   {
-  case 0:
+  case 0: //Menu
     menu = new Menu("\n\n\n\n\n\n\nChoose a Text Adventure", menuButtons);
     menu.UpdateMenu();
     currentScreen = 1;
@@ -106,7 +106,7 @@ void draw()
     theVoid = false;
     inventory.clear();
     break;
-  case 1:  
+  case 1:  //SchoolQuest
     schoolQuest = true;
     if (schoolQuestScreens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
     {
@@ -120,7 +120,7 @@ void draw()
       }
     }
     break;
-  case 2: //<>//
+  case 2: //Void //<>//
     theVoid = true;
     if (voidScreens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
     {
@@ -133,11 +133,11 @@ void draw()
       }
     }
     break;
-  case 3:
-    exit(); //Quit Button
+  case 3: //Quit
+    exit();
   }
 
-  if (currentScreen == 0)
+  if (currentScreen == 0) //Quit if screen = 0
   {
     drawScreen = false;
   }
@@ -192,7 +192,7 @@ void keyPressed() //Replaces all @CharacterNames with player-inputted ones. Howe
   }
 
 
-  switch(key)
+  switch(key) //Tools for easy navigation. Not intended to be present in the final game.
   {
   case TAB:
     currentScreen = 1;
@@ -210,7 +210,7 @@ void Parse() //The real bread and butter of the program
 {
   for (int i = 0; i < storyline.length; i++) //So long as all lines have not been read through, keep iterating
   {
-    if (storyline[i].equals("="))
+    if (storyline[i].equals("=")) //Slightly inefficient, add all possible inventory items to inventoryMaster, then later have inventory grab them out of inventoryMaster as needed.
     {
       i++;        
       while (storyline[i].charAt(0) != '>')
@@ -220,9 +220,9 @@ void Parse() //The real bread and butter of the program
       }
     }
 
-    if (storyline[i].equals("#") || storyline[i].equals("$") ||storyline[i].equals("$ ") || storyline[i].equals("$"))
+    if (storyline[i].equals("#") || storyline[i].equals("$") ||storyline[i].equals("$ ") || storyline[i].equals("$")) 
     {
-      String startingCharacter = storyline[i++];
+      String startingCharacter = storyline[i++]; //Chooses character from ^^^
       String title = storyline[i++]; //This moved-to line is the title of the screen. Record this line and increase i by 1
       String text = ""; //This moved-to line, always after the title, begins the body text of the page. This line can go until...
       while (storyline[i].charAt(0) != '>') //...the carat. Until the first character seen on a line is >, text is increased by each line of the storyline
@@ -239,7 +239,7 @@ void Parse() //The real bread and butter of the program
       int[] goesTo; //Where each  button points to 
       goesTo = int(split(storyline[i], ", ")); //Same deal as buttons
 
-      switch(startingCharacter)
+      switch(startingCharacter) //Based on startingCharacter, do whatever.
       {
       case "#":
       case "# ":
@@ -255,7 +255,7 @@ void Parse() //The real bread and butter of the program
 }
 
 
-void PlayMusic()
+void PlayMusic() //Play a song based on chosen file from music selector.
 {
   selectedSong = minim.loadFile(songName);
   selectedSong.loop(loopCount);

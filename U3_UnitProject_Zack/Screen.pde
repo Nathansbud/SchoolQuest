@@ -1,19 +1,16 @@
 class Screen //<>//
 {
-  private Button[] _options;
-  private Button _musicSelector;
-  private Button _inventory;
-  private String[] _buttonText;
-  public int[] _goesTo; 
-  private String _title;
-  private String _text;
+  private Button[] _options; //Story choices
+  private Button _musicSelector; //Music selector
+  private Button _inventory; //Inventory button
+  private String[] _buttonText; //Button labels
+  public int[] _goesTo;  //Button lead to
+  private String _title; //Screen title
+  private String _text; //Screen body
   private int _tbW, _tbH; //Text Box Width and Height
   private int _textSize;
-  JFileChooser _fc;
-  FileNameExtensionFilter _filter;
-  boolean _buttonPressed;
 
-  public Screen(String title, String text, String[] buttonText, int[] goesTo)
+  public Screen(String title, String text, String[] buttonText, int[] goesTo) //Story screen
   {
     _title = title;
     _text = text;
@@ -25,7 +22,7 @@ class Screen //<>//
     _options = new Button[_buttonText.length];
   }
 
-  public Screen(String title, String[] buttonText)
+  public Screen(String title, String[] buttonText) //Non-story screen? Menu inherits it, but it's the most half-assed inheritance the world has ever seen. Will remove this later.
   {
     _title = title;
     _buttonText = buttonText; 
@@ -33,7 +30,7 @@ class Screen //<>//
     _options = new Button[_buttonText.length];
   }
 
-  public void Update()
+  public void Update() //All-around screen update
   {
     background(bgColor); 
     DrawButtons(); //Draws buttons
@@ -64,7 +61,7 @@ class Screen //<>//
     DrawInventoryButton();
   }
 
-  private void DrawOptions() //Draws 3 buttons, assigns to them the goesTo information from Parse() 
+  private void DrawOptions() //Draws buttons, assigns to them the goesTo information & labels from Parse() 
   {
     for (int i = 0; i < _buttonText.length; i++) //Make as many buttons as there are labels for, no more no less; if 2 labels, 2 buttons; if 3 labels, 3 buttons.
     {
@@ -76,13 +73,13 @@ class Screen //<>//
     }
   }
 
-  private void DrawMusicSelector()
+  private void DrawMusicSelector() //Make music selector button
   {
     _musicSelector = new Button(" Music Selector ", float(width - width/12), float(height - height/3), "Music"); 
     _musicSelector.Update();
   }
 
-  private void DrawInventoryButton()
+  private void DrawInventoryButton() //Make sure that button isn't drawn if inventory is empty (and ensure that it can't open on menu as a catch in case I accidentally add an item there?)
   {
     if (inventory.size() > 0 && state != 0)
     {
@@ -91,12 +88,12 @@ class Screen //<>//
     }
   }
 
-  private void UpdateInfo()
+  private void UpdateInfo() //Name and text-replacement related nonsense. Desperately needs to be organized more effectively. It works for now.
   {
     if (currentScreen < 33 || currentScreen > 37)
     {
 
-      if (currentScreen == 1 && playerName != "" && playerName != " " && keyPressed && key == ENTER) //If no player name is set, playerName = Zack
+      if (currentScreen == 1 && playerName != "" && playerName != " " && keyPressed && key == ENTER) ////Promted to name player. If no player name is set, playerName = Zack
       {
         _text = _text.replaceAll("@PlayerName", playerName);
       }
@@ -105,18 +102,18 @@ class Screen //<>//
       {
         _text = _text.replaceAll("@PlayerName", playerName);
         _text = _text.replaceAll("@PlayerLastName", playerLastName);
-        for (int i = 0; i < _buttonText.length; i++)
+        for (int i = 0; i < _buttonText.length; i++) 
         {
           _buttonText[i] = _buttonText[i].replaceAll("@PlayerName", playerName);
         }
       }
 
-      if (currentScreen > 1 && playerName == "")
+      if (currentScreen > 1 && playerName == "") 
       {
         playerName = "Zack";
       }
 
-      if ((currentScreen == 11 || currentScreen == 13) && friendName != "" && playerName != " " && keyPressed && key == ENTER)
+      if ((currentScreen == 11 || currentScreen == 13) && friendName != "" && playerName != " " && keyPressed && key == ENTER) //Prompted to name friend. If no friend name, friendName = Abhay
       {
         _text = _text.replaceAll("@FriendName", friendName);
       }
@@ -130,7 +127,7 @@ class Screen //<>//
           _buttonText[i] = _buttonText[i].replaceAll("@FriendName", friendName);
         }
       } 
-      if (currentScreen > 13 && friendName == "")
+      if (currentScreen > 13 && friendName == "") 
       {
         friendName = "Abhay";
       }
@@ -139,7 +136,7 @@ class Screen //<>//
       {        
         _text = _text.replaceAll("@EnemyName", enemyName);
       }
-      if (currentScreen > 14 && enemyName != "" && enemyName != " ") //If no enemy name is set, enemyName = Rana
+      if (currentScreen > 14 && enemyName != "" && enemyName != " ") //If no enemy name is set, enemyName = Ranine...and lackey Janet but she doesn't get to be named, damn it!2
       {
         _text = _text.replaceAll("@EnemyName", enemyName);
         _text = _text.replaceAll("@LackeyName", lackeyName);
@@ -154,9 +151,9 @@ class Screen //<>//
         enemyName = "Ranine";
         lackeyName = "Janet";
       }
-      _text = _text.replaceAll("@PlayerLockerNumber", playerLockerNumber);
+      _text = _text.replaceAll("@PlayerLockerNumber", playerLockerNumber); //Set locker numbers in text to locker numbers of player/friend (based on random numbers generated)
       _text = _text.replaceAll("@FriendLockerNumber", friendLockerNumber);
-      _text = _text.replaceAll("@LockerDif", lockDif);
+      _text = _text.replaceAll("@LockerDif", lockDif); //Set difference to abs(pLN - fLN)
     }
   }
   private void DrawText()
