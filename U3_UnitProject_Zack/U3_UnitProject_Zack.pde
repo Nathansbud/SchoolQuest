@@ -1,4 +1,4 @@
-/* SchoolQuest (Working Title) //<>// //<>// //<>//
+/* SchoolQuest (Working Title) //<>// //<>//
  
  A choose your own text adventure by Zack.
  
@@ -47,7 +47,8 @@ int currentScreen = 1; //Current screen in the screens ArrayList being shown
 int loopCount = 10000;
 boolean mouseIsReleased, drawScreen, songSelected; //Used to trigger button presses
 boolean clothingChoice[] = new boolean[3], lockersRule, lockerLocked; //"Choices" player has made
-boolean giveComputer, giveRobot; //Inventory
+boolean giveComputer, giveRobot; //Inventory (SchoolQuest)
+boolean giveMap; //Inventory (Void)
 int state = 0; //Menu State (0 is Menu, 1 is SchoolQuest, 2 is Void, 3 is Quit)
 int lockerNumbers[] = new int[2];
 String lockDif;
@@ -84,7 +85,7 @@ void setup()
 
 void draw()
 {
-  println(inventory + ", Current Screen is " + currentScreen);
+  println(inventory.isEmpty() + ", Current Screen is " + currentScreen);
   CheckBooleans();
   if (songSelected)
   {
@@ -101,6 +102,8 @@ void draw()
     friendName = "";
     enemyName = "";
     lackeyName = ""; //^^^^
+    schoolQuest = false;
+    theVoid = false;
     inventory.clear();
     break;
   case 1:  
@@ -117,7 +120,7 @@ void draw()
       }
     }
     break;
-  case 2:
+  case 2: //<>//
     theVoid = true;
     if (voidScreens.size() > 0) //Once screens are loaded in, draw them (the first is 1, and currentScreen is initially set to that value)
     {
@@ -216,8 +219,8 @@ void Parse() //The real bread and butter of the program
         i++;
       }
     }
-    
-    if (storyline[i].equals("#") || storyline[i].equals("$") ||storyline[i].equals("$ ") || storyline[i].equals("$")) //<>//
+
+    if (storyline[i].equals("#") || storyline[i].equals("$") ||storyline[i].equals("$ ") || storyline[i].equals("$"))
     {
       String startingCharacter = storyline[i++];
       String title = storyline[i++]; //This moved-to line is the title of the screen. Record this line and increase i by 1
@@ -230,12 +233,11 @@ void Parse() //The real bread and butter of the program
           storyline[i] = "\n\n";
         }
       }
-      String thisLine = storyline[i].substring(1, storyline[i].length()); //The current line after reaching the carat should start after the carat, and stretch to the end of the line
+      i++;
       String[] buttonText; //The text of each button
-      buttonText = split(thisLine, ", "); //Everything on currentLine should be put into an array, seperated by commas (there can only be three things)
-      i++; //Increasing i by 1 puts the current line at the line after the carat, which tells the screens each button should lead to. 
+      buttonText = split(storyline[i++], ", "); //Everything on currentLine should be put into an array, seperated by commas (there can only be three things)
       int[] goesTo; //Where each  button points to 
-      goesTo = int(split(storyline[i++], ", ")); //Same deal as buttons
+      goesTo = int(split(storyline[i], ", ")); //Same deal as buttons
 
       switch(startingCharacter)
       {
@@ -250,16 +252,6 @@ void Parse() //The real bread and butter of the program
       }
     }
   }
-
-  //if (storyline[i].equals("="))
-  //{
-  //  i++;        
-  //  while (storyline[i].charAt(0) != '>')
-  //  {
-  //    inventoryMaster.add(storyline[i]);
-  //    i++;
-  //  }
-  //}
 }
 
 
@@ -278,9 +270,10 @@ void mouseReleased()
 }
 
 void CheckBooleans()
-{
+{ 
   if (schoolQuest)
   {
+    theVoid = false;
     UpdateInventory();
     switch(currentScreen)
     {
@@ -315,6 +308,14 @@ void CheckBooleans()
 
   if (theVoid)
   {
+    schoolQuest = false;
+    UpdateInventory();
+    switch(currentScreen)
+    {
+    case 1:
+      giveMap = true;
+      break;
+    }
   }
 }
 
@@ -322,16 +323,30 @@ void UpdateInventory()
 {
   if (!computerObtained() && giveComputer)
   {
-    inventory.add(0, inventoryMaster.get(2));
-    giveComputer = false;
+    if (schoolQuest)
+    {
+      inventory.add(0, inventoryMaster.get(2));
+      giveComputer = false;
+    }
   }
   if (!robotObtained() && giveRobot)
   {
-    inventory.add(0, inventoryMaster.get(3));
-    giveRobot = false;
+    if (schoolQuest)
+    {
+      inventory.add(0, inventoryMaster.get(3));
+      giveRobot = false;
+    }
+  }
+
+  if (!mapObtained() && giveMap)
+  {
+    if (theVoid)
+    {
+      inventory.add(0, "Map");
+      giveMap = false;
+    }
   }
 }
-
 boolean computerObtained()
 {
   if (inventory.contains(inventoryMaster.get(2)))
@@ -346,4 +361,12 @@ boolean robotObtained()
     return true;
   else
     return false;
+}
+
+boolean mapObtained()
+{
+  if (inventory.contains("Map"))
+    return true; 
+  else 
+  return false;
 }

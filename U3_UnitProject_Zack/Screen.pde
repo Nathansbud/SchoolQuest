@@ -68,7 +68,7 @@ class Screen //<>//
   {
     for (int i = 0; i < _buttonText.length; i++) //Make as many buttons as there are labels for, no more no less; if 2 labels, 2 buttons; if 3 labels, 3 buttons.
     {
-      _options[i] = new Button(_buttonText[i], width/2 - _buttonText[i].length(), height - height/3 + (height/18 * i), _goesTo[i], "Story");
+      _options[i] = new Button(_buttonText[i], width/2 - _buttonText[i].length(), height - height/3 + (height/18 * i), _goesTo[i], "Story"); //<>//
     }
     for (int i = 0; i < _buttonText.length; i++) //Updates said buttons
     {
@@ -84,7 +84,7 @@ class Screen //<>//
 
   private void DrawInventoryButton()
   {
-    if (inventory.size() > 0)
+    if (inventory.size() > 0 && state != 0)
     {
       _inventory = new Button(" Inventory ", float(width/12), float(height - height/3), "Inventory");
       _inventory.Update();

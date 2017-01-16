@@ -107,7 +107,7 @@ class Button
       _fc.cancelSelection();
     }
   }
-  
+
   private void Inventory()
   {
     Object[] options = inventory.toArray();
@@ -116,24 +116,18 @@ class Button
     {
       return;
     }
+    switch(state)
+    {
+     case 0:
+       options = null;
+       break;
+    }
     switch(choice)
     {
-    case "Computer":
+    case "Laptop":
       switch(currentScreen)
       {
-      case 2:
-        String computerPassword = (String)JOptionPane.showInputDialog("Please Enter Password");
-        switch(computerPassword)
-        {
-        case "zack":
-          JOptionPane.showMessageDialog(null, "Logged in successfully!", "Password Attempt", JOptionPane.DEFAULT_OPTION);
-          currentScreen = 40;
-          break;
-        default:
-          JOptionPane.showMessageDialog(null, "Incorrect password.", "Password Attempt", JOptionPane.DEFAULT_OPTION);
-          break;
-        }
-        break;
+
       default:
         JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
         break;
@@ -149,7 +143,26 @@ class Button
         JOptionPane.showMessageDialog(null, "You recall some dumb quote from a game you once played: ''There's a time and place for everything, but not now...'' The " + choice.toLowerCase() + " could not be used at this time.", "Attempted Item Use", JOptionPane.DEFAULT_OPTION);
         break;
       }
+      break;
+
+    case "Desktop":
+      switch(currentScreen)
+      {
+      case 2:
+        String computerPassword = (String)JOptionPane.showInputDialog("Please Enter Password");
+        switch(computerPassword)
+        {
+        case "zack":
+          JOptionPane.showMessageDialog(null, "Logged in successfully!", "Password Attempt", JOptionPane.DEFAULT_OPTION);
+          currentScreen = 40;
+          break;
+        default:
+          JOptionPane.showMessageDialog(null, "Incorrect password.", "Password Attempt", JOptionPane.DEFAULT_OPTION);
+          break;
+        }
+        break;
+      }
+      //int index = inventory.indexOf(choice);
     }
-    //int index = inventory.indexOf(choice);
   }
 }
